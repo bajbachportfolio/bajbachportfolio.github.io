@@ -1,0 +1,849 @@
+body {
+	margin: 0;
+	color: #fff;
+	font: 18px Arial, Helvetica, sans-serif; 
+	overflow-x: hidden;
+}
+$ffamily: 'Gotham Pro';
+$flight: 300;
+$fmedium: 400;
+$fbold: 700;
+$cprima:#14e6fc;
+$bg_primary: #14e6fc;
+h1, h2, h3, h4 ,h5 {
+	margin: 0;
+}
+ul {
+	margin:0;
+	padding:0;
+	list-style: none;
+}
+p {
+	margin: 0;
+	font-family: $ffamily;
+}
+a {
+	text-decoration: none;
+}
+@font-face {
+  font-family:'Gotham Pro';
+  	src:url('../fonts/GothamPro-Bold.woff') format('woff'),
+  		  url('../fonts/GothamPro-Bold.ttf') format('truetype');
+  	font-weight:700;
+  	font-style:normal;
+}
+@font-face {
+  font-family:'Gotham Pro';
+  	src:url('../fonts/GothamPro-Medium.woff') format('woff'),
+  		  url('../fonts/GothamPro-Medium.ttf') format('truetype');
+  	font-weight:400;
+  	font-style:normal;
+}
+@font-face {
+  font-family:'Gotham Pro';
+  	src:url('../fonts/GothamPro-Light.woff') format('woff'),
+  		  url('../fonts/GothamPro-Light.ttf') format('truetype');
+  	font-weight:300;
+  	font-style:normal;
+}
+//--- Шаблоны ---/
+%title {
+	text-transform: uppercase;
+	font-size: 1.6em;
+	font-weight: $fbold;
+	margin: 0 0 30px;
+}
+//--- Контент ---/
+.wrapper {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: -1;
+}
+.header__body, .production__body, .advantages__body, .footer__body {
+	display: flex;
+	width: 71%; 
+}
+//--- Хэдер ---/
+.header {
+	display: flex;
+	justify-content: center;
+	background: url(../img/block1-bg.jpg) no-repeat;
+	background-size: cover;	
+	min-height: 1280px;
+	&__body {
+		flex-direction: column;
+		padding: 0 0 0 10px;
+	}
+	&__row {
+		display: flex;
+		padding: 0 0 115px;
+	}
+	&__logo {
+		width: 37%;
+		margin: 0 30px 0 0;
+		& img {
+			max-width: 100%;
+			height: auto;
+		}
+	}
+	&__logo a {
+		display: block;
+	}
+	&__info {
+		display: flex;
+		flex-direction: column;
+		width: 66%;
+		padding: 30px 0 0;
+		position: relative;
+	}
+}
+.contacts {
+	display: flex;
+	justify-content: space-between;
+	&__phone {
+		font-family: $ffamily;
+		font-weight: $fbold;
+		font-size: 28px;
+	}
+	&__logo {
+		display: flex;
+		align-items: center;
+	}
+	&__logo span {
+		display: block;
+		margin-right: 20px;
+	}
+}
+.menu-wrap {
+	display: flex;
+	align-items: flex-end;
+}
+.menu {
+	display: flex;
+	padding: 20px 0 0 0;
+	&__items {
+		display: flex;
+	}
+	&__items li a {
+		display: block;
+		font-family: $ffamily;
+		font-weight: $fbold;
+		color: #fff;
+	}
+	&__items li a:hover{
+		color: $cprima;
+		transition: all .5s;
+	}
+	&__items li a:after {
+		content: '';
+		border-right: 1px solid white;
+		margin: 0 18px;
+	}
+	&__items li:last-child a:after {
+		border: none;
+	}
+	&.active {
+		display: block;
+		background: rgba(0,0,0,.8);
+		position: absolute;
+		width: 100%;
+		height: auto;
+		top: 100%;
+		left: 0;
+		z-index: 2;
+		& ul {
+			flex-direction: column;
+			padding: 0 0 0 30px;
+		}
+		& ul li{
+			padding: 15px 0;
+		}
+		& ul li a:after {
+		content: '';
+		border: none;
+		}
+	}
+}
+.touch-menu {
+	display: none;
+	width: 25px;
+	height: 20px;
+	cursor: pointer;
+	position: relative;
+	&:before, &:after {
+		content: '';
+		display: block;
+		width: 25px;
+		height: 2px;
+		background: #fff;
+		position: absolute;
+		left: 0;
+		transition: all .4s linear;
+	}
+	&:before {
+		top: 0;
+	}
+	&:after {
+		bottom: 0;
+	}
+	& span {
+		display: block;
+		width: 25px;
+		height: 2px;
+		background: #fff;
+		position: absolute;
+		top: 9px;
+		transition: all .4s linear;
+	}
+}
+.lang-wrap {
+	position: relative;
+	z-index: 3;
+}
+.lang-current {
+	display: flex;
+	cursor: pointer;
+	&:before {
+		content: '';
+		display: block;
+		background: url(../img/lang-arrow.png) no-repeat;
+		width: 15px;
+		height: 9px;
+		margin: 4px 8px 0 0;
+	}
+	& a {
+		font-weight: $fmedium;
+		color: #fff;
+	}
+}
+.lang-list {
+	flex-direction: column;
+	display: none;
+	position: absolute;
+	top: 30px;
+	left: 20px;
+	& li {
+		padding: 7px 0;
+		text-align: right;
+		& a {
+		font-weight: $fmedium;
+		color: #fff;
+		}
+		& a:hover {
+			color: $cprima;
+			transition: all .5s;
+		}
+	}
+	&.active {
+		display: block;
+	}
+}
+.about {
+	display: flex;
+	&__text {
+		width: 53%;
+		font-family: $ffamily;
+		font-weight: $flight;
+	}
+	&__text span {
+		display: block;
+		font-size: 48px;
+		padding: 0 0 30px;
+	}
+	&__text p {
+		font-size: 28px;
+		padding: 0 0 30px;
+	}
+	&__button {
+		width: 370px;
+		background: #fff;
+		border-radius: 40px;
+		margin-left: 85px
+	}
+	&__button a {
+		display: block;
+		color: #000;
+		text-align: center;
+		padding: 27px;
+	}
+	&__slider {
+		display: flex;
+	}
+	&__slider-dot {
+		width: 80px;
+		height: 5px;
+		background: #fff;
+		margin: 0 10px;
+	}
+	&__slider-dot:first-child {
+		height: 15px;
+	}
+}
+.slider {
+	position: absolute;
+	background: #f6f6f6;
+	width: 605px;
+	height: 600px;
+	right: 0;
+	top: 490px;
+	transform: skewY(-12deg);
+	box-shadow: 0 14px 58px rgba(0,0,0,0.15), 0 10px 10px rgba(0,0,0,0.03);
+	z-index: 5;
+	&__item {
+		width: 100%;
+		height: 150%;
+		transform: skewY(12deg);
+	}
+}
+.slick-list {
+	position: relative;
+	top: -50px;
+	overflow: hidden;
+}
+.slick-track{
+	display: flex;
+	align-items: flex-start;
+}
+.slick-slide {
+	text-align: center;
+}
+.slick-dots{
+	display: flex;
+	position: absolute;
+	& li {
+		display: flex;
+	align-items: flex-start;
+		margin: 0 10px;
+	}
+	& button {
+		font-size: 0;
+		border: none;
+		width: 80px;
+		height: 5px;
+		background: #fff;
+	}
+}
+.slick-dots li.slick-active button {
+	height: 15px;
+}
+
+//--- Блок продукции ---/
+.production {
+	display: flex;
+	justify-content: center;
+	background: url(../img/prod-bg.png) no-repeat 100% 100%;
+	color: #000;
+	width: 105%;
+	height: 1300px;
+	margin-top: -70px;
+	position: relative;
+	left: -3%;
+	z-index: 5;
+	&__body {
+		flex-direction: column;
+		align-items: flex-end;
+		font-family: $ffamily;
+		font-weight: $flight;
+	}
+	&__title {	
+		@extend %title;
+		text-align: right;
+	}
+	&__text {
+		width: 650px;
+		margin: 0 0 63px;
+		text-align: right;
+	}
+	&__tabs {
+		width: 1000px;
+	}
+}
+.tabs {
+	margin: 0 0 50px;
+	&__title {
+		display: flex;
+		margin: 0 0 80px;
+	}
+	&__item {
+		display: flex;
+		justify-content: space-around;
+		width: 25%;
+		height: 100px;
+		margin: 0 10px 0 0;
+		padding: 25px 0 0;
+		color: #000;
+		font-weight: $fmedium;
+		position: relative;
+	}
+	&__item.active {
+		background: $bg_primary;
+		color: #fff;
+	}
+	&__item:hover {
+		background: $bg_primary;
+	}
+	&__item:before {
+		content: '';
+		height: 10px;
+		width: 100%;
+		background: $bg_primary;
+		display: inline-block;
+		position: absolute;
+		top:0;
+	}
+	&__text {
+		width: 530px;
+		padding: 0 0 20px 0;
+		text-align: right;
+		display: none;
+	}
+	&__text.active{
+		display: block;
+	}
+	
+	&__text span {
+		display: block;
+		margin: 0 0 30px;
+		font-weight: $fbold;
+	}
+}
+//--- Блок преимуществ ---/
+.advantages {
+	display: flex;
+	justify-content: center;
+	width: 105%;
+	height: 1000px;
+	transform: rotate(12deg) skewX(12deg);
+	color: #000;
+	position: relative;
+	left: -2%;
+	margin: -260px 0 0;
+	overflow: hidden;
+	z-index: 5;
+	&__body {
+		flex-direction: column;
+		transform: rotate(-12deg) skewX(-12deg);
+		margin: 150px 0  0;
+	}
+	&__title {
+		@extend %title;
+	}
+	&__tabs {
+		width: 900px;
+		font-family: $ffamily;
+		font-weight: $fmedium;
+	}
+	& .tabs__title {
+		margin: 0 0 20px 0;
+	}
+	& .tabs__text {
+		width: 700px;
+		font-size: 15px;
+		font-weight: $flight;
+		line-height: 20px;
+		text-align: left;
+	}
+}
+.advantages:before {
+	content: '';
+	background: url(../img/advent-bg.jpg) no-repeat;
+	background-size: cover;
+	width: 150%;
+	height: 150%;
+	position: absolute;
+	top:-60%;
+	left: -24%;
+	transform: rotate(-12deg) skewX(-12deg);
+	z-index: -1;
+}
+.footer {
+	display: flex;
+	justify-content: center;
+	height: 340px;
+	background: $bg_primary;
+	position: relative;
+	z-index: 5;
+	&__body {
+		flex-direction: column;
+		margin-top: -280px;
+		background: url(../img/footer_bg.png) 25% 0 no-repeat;
+	}
+	&__row {
+		display: flex;
+		justify-content: end;
+		width: 100%;
+		font-family: $ffamily;
+		font-weight: $flight;
+		color: #000;
+	}
+	&__row_menu {
+		justify-content: space-around;
+		margin: 0 0 50px;
+	}
+	&__row ul li {
+		margin: 0 0 20px 0;
+		padding-left: 10px;
+	}
+	&__row ul li a {
+		color: #000;
+	}
+	&__row ul li a:hover {
+		color: #fff;
+		transition: all .3s;
+	}
+	&__row ul .phone {
+		font-size: 32px;
+	}
+	&__logo {
+		margin: 0 0 80px 0;
+	}	
+	&__logo a {
+		display: block;
+	}
+	&__products ul li:first-child, &__contacts ul li:first-child {
+		padding: 0;
+	}	
+	&__menu ul li:before, &__products ul li:first-child::before, &__contacts ul li:first-child::before {
+		content: '|';
+		margin-right: 10px;
+	}
+	&__about {
+		display: flex;
+		align-items: center;
+		width: 580px;
+		font-size: 14px;
+		text-align: right;
+		margin: 0 50px 0 0;
+	}
+	&__about p {
+		color: #4c4c4c;
+	}
+}
+.footer:before {
+	content: '';
+	display: block;
+	width: 105%;
+	height: 180%;
+	transform: rotate(-12deg) skewX(-12deg);
+	transform-origin: right;
+	background: $bg_primary;
+	position: absolute;
+	top: -611px;
+	left: -3%;
+	z-index: -1;
+}
+@media screen and (max-width: 1860px) {
+	.header__body, .production__body, .advantages__body, .footer__body {
+		width: 92%; 
+}
+}
+@media screen and (max-width: 1370px) {
+	.header {
+		&__body {
+			width: 95%;
+		}
+		&__row {
+			flex-direction: column;
+			align-items: center;
+		}
+		&__logo {
+			width: 100%;
+			text-align: center;
+		}
+		&__info {
+			width: 100%;
+		}
+	}
+	.menu-wrap {
+		justify-content: space-between;
+	}
+	.about {
+		padding: 0 0 0 30px;
+	}
+	.slider {
+		position: absolute;
+		width: 38%;
+		height: 64%;
+		top: 628px;
+		&__item {
+			width: 100%;
+			height: 100%;
+		}
+		& img {
+			max-width: 100%;
+			height: 80%;
+		}
+	}
+	.slick-list {
+		top: -5%;
+}
+	.production {
+		margin: 0;
+	}
+}
+@media screen and (max-width: 950px) {
+	.header {
+		&__body {
+			width: 100%;
+		}
+		&__row {
+		padding: 0 030px;
+		}
+	}
+	.contacts {
+		flex-direction: column;
+		align-items: center;
+		margin: 0 0 60px;
+		&__phone {
+			margin: 0 0 30px;
+		}
+	}
+	.menu-wrap {
+		margin: 0 0 40px;
+		justify-content: space-between;
+	}
+	.menu {
+		display: none;
+	}
+	.touch-menu {
+		display: block;
+	}
+	.about {
+		position: relative;
+		flex-direction: column;
+		align-items: center;
+		z-index: 1;
+		&__text {
+			width: 100%;
+			padding: 0 10px;
+		}
+		&__text, &__slider {
+			margin: 0 0 60px;
+		}
+		&__button {
+			margin: 0;
+		}
+		&__slider {
+			width: 100%;
+			margin: 0 auto 60px;
+		}
+	}
+	.slider {
+		position: absolute;
+		width: 48%;
+		height: 94%;
+		top: 400px;
+		&__item {
+			width: 100%;
+			height: 100%;
+		}
+		& img {
+			max-width: 100%;
+			height: 80%;
+		}
+	}
+	.slick-list {
+		position: relative;
+		top: 5%;
+		width: 100%;
+		height: 130%;
+		overflow: hidden;
+	}
+	.production {
+		height: 1180px;
+		background-size: 70%;
+		background-position: 100% 75%;
+		&__body {
+			padding: 130px 0 0 0;
+			width: 95%;
+		}
+		&__title {
+			padding: 0 40px;
+		}
+		&__text {
+			width: 90%;
+			padding: 0 40px;
+		}
+	}
+	.production .tabs, .advantages .tabs {
+		width: 95%;
+		&__text {
+			width: 90%;
+			padding: 0 20px 0 0;
+		}
+		&__title {
+			flex-wrap: wrap;
+		}
+		&__item {
+			flex: 0 1 20%;
+			max-width: 20%;
+			height: 70px;
+			align-items: center;
+			font-size: 12px;
+		}
+	}
+	.advantages {
+		height: 1140px;
+		&__body {
+			width: 95%;
+			padding: 0 20px;
+		}
+	}
+	.footer {
+		height: 440px;
+		&__body {
+			width: 95%;
+			margin-top: -380px;
+		}
+		&__row_menu {
+			flex-wrap: wrap;
+		}
+	}
+}
+@media screen and (max-width: 520px) {
+	.header {
+		min-height: 1100px;
+		&__body {
+			padding: 0;
+		}
+		&__row {
+			padding: 0;
+		}
+		&__logo {
+			width: 60%;
+		}
+		&__info {
+			align-items: center;
+		}
+	}
+	.contacts {
+		margin: 0 0 40px;
+	}
+	.menu-wrap {
+		width: 80%;
+	}
+	.about {
+		padding: 0;
+		&__text {
+			width: 90%;
+			text-align: center;
+		}
+		&__text p, span {
+			font-size: 24px;
+		}
+		&__text span {
+			font-weight: $fbold;
+		}
+		&__button {
+			width: 70%;
+			margin: 0 auto;
+		}
+		&__button a {
+			padding: 14px;
+		}
+		&__slider {
+			width: 100%;
+			height: auto;
+		}
+	}
+	.slider {
+		position: static;
+		width: 95%;
+		height: 57%;
+		top: 490px;
+		&__item {
+			width: 100%;
+			height: 100%;
+		}
+		& img {
+			max-width: 100%;
+			height: 80%;
+		}
+	}
+	.slick-list {
+		position: relative;
+		top: 4%;
+		width: 100%;
+		height: 130%;
+		overflow: hidden;
+	}
+	.production {
+		height: 1390px;
+		background-size: 100%;
+		background-position: 100% 80%;
+		&__body {
+			padding: 130px 0 0 0;
+		}
+		&__title, &__text {
+			padding: 0 20px 0 0;
+		}
+	}
+	.production .tabs {
+		&__title {
+			flex-wrap: wrap;
+		}
+		&__item {
+			flex: 0 1 45%;
+			max-width: 45%;
+			height: auto;
+			align-items: center;
+			font-size: 14px;
+		}
+	}
+	.advantages {
+		height: 1240px;
+		&__body {
+			margin: 117px 0 0;
+		}
+	}
+	.advantages .tabs {
+		&__item {
+			flex: 0 1 100%;
+			max-width: 100%;
+			height: auto;
+			align-items: center;
+			font-size: 14px;
+			margin: 0;
+		}
+	}
+	.footer {
+		justify-content: center;
+		height: 740px;
+		&__body {
+			margin-top: -390px;
+		}
+		&__row {
+			justify-content: flex-start;
+		}
+		&__logo {
+			padding: 0 20px;
+		}
+		&__row_menu {
+			flex-direction: column;
+			align-items: center;
+		}
+		&__menu, &__products, &__contacts {
+			width: 90%;
+			margin: 0 0 40px;
+		}
+		&__row ul li {
+			padding: 0;
+		}
+		&__row ul .phone {
+			font-size: 28px;
+		}
+		&__about {
+			width: 90%;
+			margin: 0 0 40px;
+			text-align: left;
+		}
+	}
+	.column {
+			flex-direction: column;
+			padding: 0 20px;
+		}
+}
