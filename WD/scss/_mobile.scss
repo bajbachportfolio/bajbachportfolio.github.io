@@ -1,0 +1,24 @@
+.options{
+	&__items {
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	&__item {
+		flex: 0 1 50%;
+		max-width: 50%;
+		margin-bottom: 30px;
+	}
+}
+.footer {
+	&__row {
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+	}
+}
+.social {
+	margin-bottom: 20px;
+}
+.rights {
+	text-align: left;
+}
