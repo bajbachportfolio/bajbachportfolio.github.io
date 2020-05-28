@@ -1,0 +1,117 @@
+.hero {
+	min-height: 620px;
+}
+.header {
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 60px;
+	padding: 40px 15px 0;
+	position: relative;
+	z-index: 3;
+	&__menu {
+		position: absolute;
+		left: -100%;
+		top: 80px;
+		z-index: 2;
+		transition: all .4s linear;
+		& ul {
+			flex-direction: column;
+			background: rgba(0,0,0,.8);
+			padding: 20px;
+			& li {
+				padding: 15px 0;
+			}
+			& li a {
+				color: $white;
+			}
+			& li a:hover {
+				color: $main;
+			}
+		}
+	}
+	&__menu.active {
+		display: block;
+		width: 100%;
+		height: auto;
+		left: 0;
+		z-index: 2;
+		transition: all .4s linear;
+	}
+}
+.intro {
+	text-align: center;
+}
+.touch-menu {
+	display: flex;
+	&.active span {
+		transform: scale(0);
+	}
+	&.active:before {
+		transform: rotate(45deg);
+		top: 5px;
+		transition: all .4s linear;
+	}
+	&.active:after {
+		transform: rotate(-45deg);
+		bottom: 5px;
+		transition: all .4s linear;
+	}
+}
+.btn-1 {
+	margin: 0 auto;
+}
+.skills {
+	background-size: 50%;
+	background-position: 131% 0;
+	min-height: auto;
+	&__row {
+		padding: 0 15px;
+	}
+}
+.advantages {
+	&__row {
+		margin-left: 10%;
+	}
+	&__item {
+		margin-bottom: 30px;
+	}
+}
+.gallery {
+	&__item {
+		padding: 0 0 42%;
+	}
+}
+.options {
+	&__item {
+		margin-bottom: 30px;
+	}
+}
+.clients {
+	&__item {
+		flex: 0 0 50%;
+		max-width: 50%;
+		margin-bottom: 30px;
+	}
+}
+.order-form {
+	& input[type="email"], & .input-name {
+		width: 100%;
+		margin-right: 0;
+	}
+}
+.footer {
+	&__row {
+		flex-wrap: wrap;
+	}
+	&__item {
+		width: 50%;
+		margin-bottom: 30px;
+		&:nth-child(3) {
+			width: 50%;
+			margin: 0 0 30px;
+		}
+		&:last-child {
+		justify-content: flex-start;
+		}
+	}
+}

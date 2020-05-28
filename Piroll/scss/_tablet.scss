@@ -1,0 +1,26 @@
+.hero {
+	&__overlay {
+		display: block;
+	}
+}
+.header {
+	padding: 40px 15px 0;
+}
+.intro {
+	width: 50%;
+}
+.skills {
+	background-size: 55%;
+	background-position: 127% 50%;
+	min-height: auto;
+	&__row {
+		padding: 0 15px;
+	}
+}
+.footer {
+	&__item {
+		&:nth-child(3) {
+			margin: 0;
+		}
+	}
+}
