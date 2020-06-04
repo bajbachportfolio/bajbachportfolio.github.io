@@ -1,0 +1,63 @@
+.menu.active {
+	right: 0;
+}
+.sign-form {
+	margin: 50px 0 0;
+	& input[type="text"], & input[type="email"] {
+		width: 80%;
+	}
+}
+.slider-holder {
+	transform: scale(.8);
+	background: none;
+	top: 42px;
+}
+.slider {
+	border: 15px solid #0b0b0b;
+	border-radius: 6px;
+	height: 266px;
+}
+.services__item {
+	flex: 0 0 100%;
+}
+.prices__items {
+	display: block;
+}
+.price, .price:nth-child(3) {
+	width: 80%;
+	margin: 0 auto 20px;
+	border: 1px solid #ccd5df;
+	border-radius: 4px;
+}
+.work-process__items {
+	flex-wrap: wrap;
+	& figure {
+		flex: 0 0 50%;
+		margin: 0 0 30px;
+	}
+}
+.arrows {
+	display: none;
+}
+.testimonials__item {
+	flex-direction: column;
+	& .img-holder {
+		width: 125px;
+		margin: 0 auto 20px;
+	}
+}
+.testimonials__text {
+	text-align: center;
+}
+.contacts {
+	&__logo {
+		width: 100%;
+	}
+	&__menu {
+		display: none;
+	}
+	&__phone {
+		margin: 22px 0;
+	}
+
+}
