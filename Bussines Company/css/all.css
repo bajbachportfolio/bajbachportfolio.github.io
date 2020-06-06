@@ -425,9 +425,9 @@ header {
   .step__img {
     display: flex;
     justify-content: center;
+    align-items: flex-end;
     min-height: 68px;
-    margin: 0 0 80px;
-    align-items: flex-end; }
+    margin: 0 0 80px; }
   .step figcaption {
     font-family: "Open Sans";
     padding: 0 25px 0;
