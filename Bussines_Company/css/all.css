@@ -616,7 +616,7 @@ footer {
     flex-direction: column;
     position: absolute;
     top: 101.5px;
-    right: -100%;
+    left: -100%;
     padding: 40px;
     background: #000;
     opacity: .9;
@@ -664,7 +664,7 @@ footer {
 
 @media screen and (max-width: 684px) {
   .menu.active {
-    right: 0; }
+    left: 0; }
   .sign-form {
     margin: 50px 0 0; }
     .sign-form input[type="text"], .sign-form input[type="email"] {

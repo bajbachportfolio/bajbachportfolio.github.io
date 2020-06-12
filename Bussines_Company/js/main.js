@@ -35,6 +35,10 @@ $(document).scroll( function() {
 		$('.scroll-up').text('Up');
 	} else {
 		$('.scroll-up').fadeOut();
+	}	
+});
+$('.scroll-up').ready(function() {
+if ($(window).width() < 684) {
+		$('.scroll-up').fadeOut();
 	}
 });
-
