@@ -17,6 +17,9 @@
 	border-radius: 6px;
 	height: 266px;
 }
+.services {
+	padding: 165px 0 0;
+}
 .services__item {
 	flex: 0 0 100%;
 }
@@ -59,5 +62,9 @@
 	&__phone {
 		margin: 22px 0;
 	}
+}
+.scroll-up {
+	right: 10px;
+	bottom: 10px;
 }
 

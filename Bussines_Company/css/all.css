@@ -677,6 +677,8 @@ footer {
     border: 15px solid #0b0b0b;
     border-radius: 6px;
     height: 266px; }
+  .services {
+    padding: 165px 0 0; }
   .services__item {
     flex: 0 0 100%; }
   .prices__items {
@@ -705,4 +707,7 @@ footer {
   .contacts__menu {
     display: none; }
   .contacts__phone {
-    margin: 22px 0; } }
+    margin: 22px 0; }
+  .scroll-up {
+    right: 10px;
+    bottom: 10px; } }
