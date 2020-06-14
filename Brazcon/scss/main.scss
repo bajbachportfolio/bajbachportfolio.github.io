@@ -474,7 +474,7 @@ a {
 	}
 	&__row {
 		display: flex;
-		justify-content: end;
+		justify-content: flex-end;
 		width: 100%;
 		font-family: $ffamily;
 		font-weight: $flight;
@@ -575,7 +575,7 @@ a {
 		}
 		& img {
 			max-width: 100%;
-			height: 80%;
+			height: auto;
 		}
 	}
 	.slick-list {
@@ -643,7 +643,7 @@ a {
 		}
 		& img {
 			max-width: 100%;
-			height: 80%;
+			height: auto;
 		}
 	}
 	.slick-list {
@@ -748,6 +748,7 @@ a {
 		&__slider {
 			width: 100%;
 			height: auto;
+			justify-content: center;
 		}
 	}
 	.slider {
@@ -761,7 +762,7 @@ a {
 		}
 		& img {
 			max-width: 100%;
-			height: 80%;
+			height: auto;
 		}
 	}
 	.slick-list {
@@ -770,6 +771,9 @@ a {
 		width: 100%;
 		height: 130%;
 		overflow: hidden;
+	}
+	.slick-dots button {
+		width: 70px;
 	}
 	.production {
 		height: 1390px;
@@ -789,7 +793,6 @@ a {
 		&__item {
 			flex: 0 1 45%;
 			max-width: 45%;
-			height: auto;
 			align-items: center;
 			font-size: 14px;
 		}
@@ -804,7 +807,6 @@ a {
 		&__item {
 			flex: 0 1 100%;
 			max-width: 100%;
-			height: auto;
 			align-items: center;
 			font-size: 14px;
 			margin: 0;
@@ -820,7 +822,11 @@ a {
 			justify-content: flex-start;
 		}
 		&__logo {
-			padding: 0 20px;
+			padding: 0 10px;
+			& img {
+				width: 100%;
+				height: auto;
+			}
 		}
 		&__row_menu {
 			flex-direction: column;

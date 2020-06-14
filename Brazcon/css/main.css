@@ -398,7 +398,7 @@ a {
     background: url(../img/footer_bg.png) 25% 0 no-repeat; }
   .footer__row {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     width: 100%;
     font-family: "Gotham Pro";
     font-weight: 300;
@@ -477,7 +477,7 @@ a {
       height: 100%; }
     .slider img {
       max-width: 100%;
-      height: 80%; }
+      height: auto; }
   .slick-list {
     top: -5%; }
   .production {
@@ -526,7 +526,7 @@ a {
       height: 100%; }
     .slider img {
       max-width: 100%;
-      height: 80%; }
+      height: auto; }
   .slick-list {
     position: relative;
     top: 5%;
@@ -602,7 +602,8 @@ a {
       padding: 14px; }
     .about__slider {
       width: 100%;
-      height: auto; }
+      height: auto;
+      justify-content: center; }
   .slider {
     position: static;
     width: 95%;
@@ -613,13 +614,15 @@ a {
       height: 100%; }
     .slider img {
       max-width: 100%;
-      height: 80%; }
+      height: auto; }
   .slick-list {
     position: relative;
     top: 4%;
     width: 100%;
     height: 130%;
     overflow: hidden; }
+  .slick-dots button {
+    width: 70px; }
   .production {
     height: 1390px;
     background-size: 100%;
@@ -633,7 +636,6 @@ a {
   .production .tabs__item {
     flex: 0 1 45%;
     max-width: 45%;
-    height: auto;
     align-items: center;
     font-size: 14px; }
   .advantages {
@@ -643,7 +645,6 @@ a {
   .advantages .tabs__item {
     flex: 0 1 100%;
     max-width: 100%;
-    height: auto;
     align-items: center;
     font-size: 14px;
     margin: 0; }
@@ -655,7 +656,10 @@ a {
     .footer__row {
       justify-content: flex-start; }
     .footer__logo {
-      padding: 0 20px; }
+      padding: 0 10px; }
+      .footer__logo img {
+        width: 100%;
+        height: auto; }
     .footer__row_menu {
       flex-direction: column;
       align-items: center; }
