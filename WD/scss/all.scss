@@ -46,6 +46,7 @@ a, a:hover {
 .wrapper {
 	display: flex;
 	flex-direction: column;
+	overflow: hidden;
 }
 .content {
 	width: 960px;
@@ -262,20 +263,32 @@ a, a:hover {
 	color: $gray;
 }
 .clients {
-	@include flex(flex,center);
 	padding: 70px 0 40px;
+	&__content {
+		margin: 0 auto;
+		max-width: 960px;
+	}
 	&__row {
 		text-align: center;
 	}
 	&__carousel {
 		display: flex;
 		margin: 50px 0 0;
+		max-width: 960px;
 	}
 }
 .slider {
 	width: 90%;
 	&__item {
+		display: flex;
+		justify-content: center;
+		& img {
+			max-width: 100%;
+		}
 	}
+}
+.slick-slider {
+	min-width: 0;
 }
 .slick-list {
 	overflow: hidden;
@@ -283,7 +296,6 @@ a, a:hover {
 .slick-track{
 	display: flex;
 	align-items: flex-start;
-	width: 100%;
 }
 .arrow-l {
 	width: 5%;

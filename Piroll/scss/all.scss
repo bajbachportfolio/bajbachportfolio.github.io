@@ -280,6 +280,7 @@ a, a:hover {
 	&__row {
 		display: flex;
 		flex: 0 1 100%;
+		flex-wrap: wrap;
 	}
 	&__item {
 		padding: 0 0 22% 0;
@@ -539,6 +540,10 @@ a, a:hover {
 			justify-content: flex-end;
 		}
 	}
+}
+.copy {
+	color: #fff;
+	display: block !important;
 }
 
 @media  screen and (max-width: 1200px) {

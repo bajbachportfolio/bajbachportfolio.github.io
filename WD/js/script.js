@@ -3,7 +3,8 @@ $(document).ready(function(){
 		arrows:false,
 		dots:false,
 		slidesToShow:4,
-		autoplay:false,
+		slidesToScroll:2,
+		autoplay:true,
 		speed:1000,
 		autoplaySpeed:2000,
 		infinite: true,
@@ -23,7 +24,8 @@ $(document).ready(function(){
 			{
 				breakpoint: 550,
 				settings: {
-					slidesToShow:1
+					slidesToShow:1,
+					slidesToScroll:1
 				}
 			}
 		]
