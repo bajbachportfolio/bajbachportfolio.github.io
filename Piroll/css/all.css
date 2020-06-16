@@ -244,7 +244,8 @@ a, a:hover {
     flex-direction: column; }
   .gallery__row {
     display: flex;
-    flex: 0 1 100%; }
+    flex: 0 1 100%;
+    flex-wrap: wrap; }
   .gallery__item {
     padding: 0 0 22% 0;
     position: relative;
@@ -470,6 +471,10 @@ a, a:hover {
       display: flex;
       justify-content: flex-end; }
 
+.copy {
+  color: #fff;
+  display: block !important; }
+
 @media screen and (max-width: 1200px) {
   .hero__overlay {
     display: block; }
@@ -562,13 +567,15 @@ a, a:hover {
   .order-form input[type="email"], .order-form .input-name {
     width: 100%;
     margin-right: 0; }
-  .footer__row {
-    flex-wrap: wrap; }
-  .footer__item {
-    width: 50%;
-    margin-bottom: 30px; }
-    .footer__item:nth-child(3) {
+  .footer {
+    padding: 100px 15px 50px; }
+    .footer__row {
+      flex-wrap: wrap; }
+    .footer__item {
       width: 50%;
-      margin: 0 0 30px; }
-    .footer__item:last-child {
-      justify-content: flex-start; } }
+      margin-bottom: 30px; }
+      .footer__item:nth-child(3) {
+        width: 50%;
+        margin: 0 0 30px; }
+      .footer__item:last-child {
+        justify-content: flex-start; } }
