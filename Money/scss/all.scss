@@ -1,0 +1,712 @@
+body {
+	width: 100%;
+	margin: 0;
+	color: #252525;
+	font: 16px Arial, Helvetica, sans-serif;
+	font-family: 'DINpro';
+	background: #0b0c0e;
+}
+* {
+	box-sizing: border-box;
+}
+input, textarea, select form,fieldset {
+	vertical-align:middle;
+	color:#000;
+	margin:0;
+	padding:0;
+	border-style:none;
+}
+ul {
+	margin:0;
+	padding:0;
+	list-style: none;
+}
+p, h1, h2, h3, h4, h5, h6, figure {
+	margin: 0;
+}
+a, a:hover {
+	text-decoration: none;
+}
+@font-face {
+	font-family: 'DINpro';
+	src: url('../fonts/DINPro-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'DINpro';
+	src: url('../fonts/DINPro.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'DINpro';
+	src: url('../fonts/DINPro-Bold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'DINpro';
+	src: url('../fonts/DINPro-Medium.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+}
+@import 'variables.scss';
+@import 'mixins.scss';
+.wrapper {
+	position: relative;
+}
+/****первый блок hero****/
+.hero {
+	background: url(../img/hero-bg.jpg) no-repeat 0 20%;
+	background-size: cover;
+}
+.content {
+	width: 100%;
+	max-width: 1350px;
+}
+.header {
+	display: flex;
+	justify-content: center;
+	padding: 0 0 0 102px;
+	&__menu {
+		display: flex;
+		& li {
+			margin: 0 20px;
+			display: flex;
+			align-items: center;
+		}
+		& a {
+			color: $text1;
+			font-size: 18px;
+		}
+		& a:hover {
+			color: $text2;
+		}
+	}
+	&__contacts {
+		background:url(../img/map-marker.png) no-repeat 0 50%;
+		padding: 0 0 0 50px;
+	}
+}
+.touch-menu {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 25px;
+	height: 20px;
+	cursor: pointer;
+	display: none;
+	& span {
+			margin: 5px 0;
+	}
+	&:before {
+		content: '';
+		display: block;
+		width: 25px;
+		height: 3px;
+		background: #fff;
+		transition: all .3s ease 0s;
+	}
+	& span {
+		display: block;
+		width: 25px;
+		height: 3px;
+		background: #fff;
+		transition: all .3s ease 0s;
+	}
+	&:after {
+		content: '';
+		display: block;
+		width: 25px;
+		height: 3px;
+		background: #fff;
+		transition: all .3s ease 0s;
+	}
+}
+.header-holder {
+	display: flex;
+	justify-content: space-between;
+	padding: 40px 0 30px 0;
+}
+.menu-holder {
+	display: flex;
+	align-items: center;
+}
+.city-select {
+	position: relative;
+	&__header {
+		display: flex;
+		align-items: center;
+	}
+	&__current {
+		color: $orange;
+		font-weight: 400;
+		font-size: 18px;
+		margin: 0 0 8px;
+	}
+	&__body {
+		position: absolute;
+		top: 35px;
+		left: -20px;
+		min-width: 195px;
+		background: #17181b;
+		color: $text1;
+		padding: 10px 0;
+		z-index: 50;
+		display: none;
+	}
+	&__icon {
+		background: url(../img/select-arrow2.png) no-repeat;
+		width: 9px;
+		height: 5px;
+		margin: -5px 0 0 10px;
+	}
+	&__item {
+		padding: 10px 20px;
+	}
+	&__item:hover {
+		color: $text2;
+	}
+	&.active .city-select__body {
+		display: block;
+	}
+	&.active .city-select__icon {
+		transform: rotate(180deg);
+	}
+}
+.tel-number {
+	font-size: 20px;
+	font-weight: 600;
+	color: $text2;
+}
+.main {
+	display: flex;
+	justify-content: center;
+	padding: 35px 20px 85px 102px;
+	background: #fff;
+}
+.breedcrumbs {
+	display: flex;
+	margin: 0 0 50px;
+	& li {
+		margin: 0 20px 0 0;
+	}
+	& li:after {
+		content: '/';
+		display: inline-block;
+		color: $text1;
+		font-size: 14px;
+		margin: 0 0 0 20px;
+	}
+	& a {
+		font-size: 14px;
+		color: $text1;
+	}
+	& .current a {
+		color: $orange;
+	}
+	& li:last-child:after {
+		content: '';
+	}
+}
+.contacts {
+	display: flex;
+	justify-content: space-between;
+}
+.contacts-wrap {
+	width: 40%;
+}
+.title {
+	font-size: 30px;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin: 0 0 40px;
+}
+.title span {
+	font-weight: 300;
+}
+.exchange-select {
+
+}
+.select-wrap {
+	display: flex;
+	justify-content: flex-end;
+	background: url(../img/map-marker2.png) no-repeat 0 80%;
+	margin: 0 0 30px;
+}
+.select-list {
+	padding: 30px 0 0;
+	position: relative;
+	width: 90%;
+}
+.select-list__header, .select-list__body {
+	border: 1px solid #e7e7e8;
+	border-radius: 3px;
+	width: 100%;
+	line-height: 24px;
+	background: #f6f6f6;
+	padding: 10px 10px 10px 20px;
+	cursor: pointer;
+}
+.select-list__header {
+	position: relative;
+}
+.select-list__current {
+	font-weight: bold;
+}
+.select-list__icon {
+	background: url(../img/select-arrow.png) no-repeat;
+	width: 7px;
+	height: 5px;
+	position: absolute;
+	right: 5%;
+	top: 50%;
+	margin: -2px 0 0;
+}
+.select-list__body {
+	position: absolute;
+	top: 101%;
+	left: 0;
+	display: none;
+}
+.select-list__item {
+	padding: 0 0 10px;
+	cursor: pointer;
+	color: #555555;
+}
+.select-list__item:hover {
+	color: #18181f;
+}
+.select-list.active .select-list__header {
+	border: 1px solid $orange;
+}
+.select-list.active .select-list__icon {
+	transform: rotate(180deg);
+}
+.select-list.active .select-list__body {
+	display: block;
+}
+.info {
+	margin: 0 0 20px;
+}
+.phones-wrap {
+	background: url(../img/phone.png) no-repeat 0% 0%;
+}
+.phones {
+	margin: 0 0 30px;
+	padding: 0 0 0 66px;
+}
+.phones a {
+	display: block;
+	margin: 10px 0 0;
+	font-size: 16px;
+	color: $green;
+}
+.phone-number {
+	font-size: 18px;
+	font-weight: 600;
+}
+.map-wrap {
+	background: url(../img/map.png) no-repeat 0% 0%;
+}
+.map {
+	padding: 0 0 0 66px;
+	margin: 0 0 30px;
+}
+.map span {
+	display: block;
+	font-size: 14px;
+	font-weight: 600;
+	text-transform: uppercase;
+	margin: 0 0 15px;
+}
+.time-wrap {
+	background: url(../img/clock.png) no-repeat 0% 0%;
+}
+.time {
+	padding: 0 0 0 66px;
+	margin: 0 0 30px;
+	min-height: 28px;
+}
+.telegram-wrap {
+	background: url(../img/telegram.png) no-repeat 0% 0%;
+}
+.telegram {
+	padding: 0 0 0 66px;
+	margin: 0 0 30px;
+	min-height: 27px;
+}
+.telegram a {
+	color: $green;
+}
+.show-map {
+	padding: 0 0 0 66px;
+}
+.show-btn {
+	padding: 0 30px;
+	line-height: 48px;
+	background: $green;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 13px;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: #fff;
+}
+.photo {
+	width: 50%;
+	height: 100%;
+	position: relative;
+}
+.zoom {
+	width: 55px;
+	height: 55px;
+	background: rgba(54,54,55,.9);
+	background-image: url(../img/zoom.png);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+	cursor: pointer;
+}
+.photo img {
+	width: 100%;
+	height: auto;
+}
+/****попап карта******/
+.popup-map {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0, .7);
+	z-index: 40;
+	overflow-y: auto;
+	overflow-x: hidden;
+	display: none;
+	&__body {
+		min-height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 30px 10px
+	}
+	&__content {
+		width: 1120px;
+		background: #fff;
+		padding: 30px;
+		position: relative;
+	}
+}
+.popup-close {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	width: 40px;
+	height: 40px;
+	background: #f6f6f6;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	cursor: pointer;
+	&:before, &:after {
+		content: '';
+		display: block;
+		width: 18px;
+		height: 2px;
+		background: $main_bg1;
+		position: absolute;
+		left: 26%;
+		transition: all .4s linear;
+	}
+	&:before {
+		top: 50%;
+		transform: rotate(45deg);
+	}
+	&:after {
+		top: 50%;
+		transform: rotate(-45deg);
+	}
+	&:hover {
+		background: $orange;
+	}
+}
+.map-img {
+	width: 1060px;
+	height: 590px;
+	overflow: hidden;
+	position: relative;
+	& img {
+		position: absolute;
+		top: -100px;
+		left: -100px;
+
+	}
+}
+.message {
+	display: flex;
+	justify-content: center;
+	padding: 95px 20px 95px 102px;
+	& .title {
+		color: $text2;
+	}
+	&__holder {
+		display: flex;
+	}
+	& p {
+		color: $text1;
+	}
+	&__btn {
+		text-align: right;
+		width: 100%;
+	}
+}
+.message-btn {
+	padding: 0 30px;
+	line-height: 48px;
+	background: $orange;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 13px;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: #18181f;
+}
+.popup-message, .popup-send-done {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0, .7);
+	z-index: 40;
+	overflow-y: auto;
+	overflow-x: hidden;
+	display: none;
+	&__body {
+		min-height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 30px 10px
+	}
+	&__content {
+		width: 660px;
+		background: #fff;
+		padding: 30px 40px 50px;
+		position: relative;
+	}
+	& .popup-close {
+		right: 40px;
+	}
+}
+.popup-send-done {
+	& p {
+		margin: 0 0 50px;
+		font-size: 18px;
+		color: #555555;
+	}
+	& .show-btn-wrap {
+		display: flex;
+		justify-content: center;
+	}
+	& .show-btn {
+		width: 40%;
+		text-align: center;
+	}
+}
+.popup-title {
+	font-size: 24px;
+	text-transform: uppercase;
+	margin: 0 0 50px;
+}
+.message-form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	& span {
+		display: block;
+		margin: 0 0 20px;
+	}
+	& sup {color: $orange;}
+	& input, textarea {
+		border: 1px solid #e7e7e8;
+		border-radius: 3px;
+		width: 100%;
+		line-height: 24px;
+		background: #f6f6f6;
+		padding: 10px 10px 10px 20px;
+		cursor: pointer;
+	}
+	& input:focus, textarea:focus {
+		border: 1px solid $orange;
+	}
+	& input[type="email"], & .input-name, .input-text {
+		margin: 0 0 30px 0;
+		padding: 0 0 0 20px;
+		line-height: 50px;
+	}
+	& .name, .email {
+		width: 47%;
+	}
+	& .text, .comment {
+		width: 100%;
+	}
+	& textarea {
+		width: 100%;
+		padding: 20px;
+		margin: 0 0 50px 0;
+	}
+	& .send-message {
+		width: 100%;
+		text-align: center;
+	}
+	& input[type="submit"] {
+		width: 40%;
+		background: $green;
+		padding: 10px;
+		border: 1px solid transparent;
+		border-radius: 4px;
+	}
+}
+/*****Сайдбар левый******/
+.sidebar {
+	width: 60px;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: $main_bg1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	z-index: 30;
+}
+.autorize {
+	text-align: center;
+	& li {
+		padding: 20px 0 16px;
+	}
+	&__telegram {
+		background: $green;
+	}
+	&__lang a {
+		font-weight: bold;
+		color: $text2;
+	}
+}
+.options {
+	text-align: center;
+	margin: -250px 0 0;
+	& li {
+		padding: 25px 0 21px;
+	}
+	&__active {
+		position: relative;
+	}
+	&__active:after {
+		content: '';
+		width: 5px;
+		height: 60px;
+		position: absolute;
+		top: 14%;
+		right: -5px;
+		background: $orange;
+	}
+}
+.social {
+	text-align: center;
+	& li {
+		padding: 15px 0 11px;
+	}
+}
+.footer {
+	display: flex;
+	justify-content: center;
+	padding: 45px 20px 105px 102px;
+	font-size: 14px;
+	color: $text1;
+	position: relative;
+	&__holder {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__bottom {
+		display: flex;
+		align-items: center;
+		position: absolute;
+		width: 100%;
+		left: 0;
+		bottom: 0;
+		z-index: 25;
+		background: $main_bg1;
+	}
+}
+.news {
+	width: 80%;
+	height: 60px;
+	&__item {
+		display: flex;
+		margin: 0 30px 0 0;
+	}
+	& span {
+		background: $green;
+		border: 1px solid transparent;
+		border-radius: 4px;
+		font-size: 14px;
+		font-weight: 600;
+		color: $text2;
+		margin: 0 15px 0 0;
+		padding: 0 8px;
+	}
+	& a {
+		font-weight: 700;
+		color: $text2;
+		margin: 0 15px 0 0;
+	}
+}
+.download {
+	display: flex;
+	& a {
+		display: block;
+		width: 100%;
+		height: 100%;
+		font-size: 12px;
+		color: $text2;
+	}
+	& span {
+		font-size: 16px;
+		font-weight: bold;
+	}
+}
+.appstore, .googleplay {
+	padding: 12px 15px 15px 60px;;
+	background: url(../img/apple.png) no-repeat 20% 50%;
+	border-left: 2px solid #0b0c0e;
+}
+.googleplay {
+	background: url(../img/googleplay.png) no-repeat 20% 50%;
+}
+.web-master {
+	display: flex;
+	line-height: 20px;
+	& a {
+		display: block;
+		background: url(../img/webmaster-logo.png) no-repeat 8% 0;
+		padding: 0 0 0 40px;
+		color: $text2;
+	}
+}
+@media screen and (max-width: 864px) {
+	@import '_tablet.scss';
+}
+@media screen and (max-width: 664px) {
+	@import '_mobile.scss';
+}
