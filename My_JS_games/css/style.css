@@ -85,18 +85,79 @@ a, a:hover {
 	display: flex;
 	justify-content: center;
 }
-.wonder-field {
+.game {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	width: 100px;
 	height: 100px;
-	background: #2e9a4c;
+	margin: 0 30px 0 0;
 	cursor: pointer;
+}
+.game:last-child {
+	margin: 0;
+}
+.wonder-field {
+	background: #2e9a4c;
+}
+.treassures {
+	background: #7cd64c;
+}
+.pop-up-trss {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background:rgba(0, 0, 0, 0.7);
+	display: none;
+}
+.pop-up-trss__body {
+	min-height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.pop-up-trss__content {
+	width: 800px;
+	background: #fff;
+	padding: 30px;
+	position: relative;
+}
+.pop-up-trss__content p {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 28px;
+}
+.pop-up-trss__close {
+	width: 30px;
+	height: 30px;
+	background: #ccaabb;
+	position: absolute;
+	right: 15px;
+	top: 15px;
+	font-size: 22px;
+	display: flex;
+	justify-content: center;
+}
+.treassure-map {
+	background: url(../img/treasure-map.png) no-repeat;
+	margin: 0;
+	padding-top: 65%;
+	background-size: cover;
 }
 .name {
 	font-size: 16px;
 	text-transform: uppercase;
 	color: #fff;
 	text-align: center;
+}
+@media screen and (max-width: 530px) {
+	.games {
+		flex-direction: column;
+		align-items: center;
+	}
+	.game {
+		margin: 0 0 30px 0;
+	}
 }
