@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/all.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.min.css">
+	<link rel="stylesheet" href="css/nice-select.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sofa shop</title>
+	<script src="https://use.fontawesome.com/3e634e6a94.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/main.js"></script>
+</head>
+<body>
+	<header>
+		<div class="header__top">
+			<div class="header__content">
+				<div class="header__drops">
+					<select class="money">
+						<option value="1">Usd</option>
+						<option value="2">Eur</option>
+						<option value="3">Fnt</option>
+					</select>
+					<select class="lang">
+						<option value="1">Eng</option>
+						<option value="2">Frn</option>
+						<option value="3">Rus</option>
+					</select>
+					<span class="help"><a href="#">Help</a></span>
+				</div>
+				<ul class="header__user-info">
+					<li class="login"><a href="#">Login</a></li>
+					<li class="registration"><a href="#">Register</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="header__bottom">
+			<div class="header__content">
+				<div class="phone">
+					<a href="tel:2300 - 3560 - 222">2300 - 3560 - 222</a>
+				</div>
+				<div class="logo-wrap">
+					<div class="logo">
+						<a href="#"><img src="img/logo.png" alt="logo"></img></a>
+					</div>
+					<div class="cart">
+						<a href="#"></a>
+						<span class="quantity">0</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header__menu">
+			<div class="header__content">
+				<div class="select-form">
+					<div class="select-list">
+						<select class="categories-select">
+							<option value="1">Select a category</option>
+							<option value="2">Furniture</option>
+							<option value="3">Chair</option>
+							<option value="4">Table</option>
+							<option value="5">Sofa</option>
+							<option value="6">Bedroom</option>
+						</select>
+					</div>
+					<div class="search-product">
+						<input type="text" name="text" placeholder="Search a product.." class="search-input">
+						<button class="search-btn">
+							<i class="search-img"></i>
+						</button>
+					</div>
+				</div>
+				<ul class="menu">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Furniture</a></li>
+					<li><a href="#">Chair</a></li>
+					<li><a href="#">Table</a></li>
+					<li><a href="#">Sofa</a></li>
+					<li><a href="#">Bedroom</a></li>
+					<li><a href="#">Blog</a></li>
+				</ul>
+				<div class="touch-menu">
+					<span></span>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="main">
+		<div class="content">
+			<div class="offer">
+				<strong><span>Bedroom</span> furniture</strong>
+				<span class="sub-text">always <b>25%</b> off or more</span>
+			</div>
+			<div class="breedcrumbs">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li class="current"><a href="#">Furniture</a></li>
+				</ul>
+			</div>
+			<div class="main-content">
+				<div class="two-columns">
+					<div class="products">
+						<div class="products__options">
+							<h2 class="title">Furniture</h2>
+							<div class="sort-list">
+								<span>Sort by</span>
+								<div class="select-list">
+									<select class="categories-select">
+										<option value="1">Price: lower first</option>
+										<option value="2">Price: higher first</option>
+										<option value="3">Name</option>
+										<option value="4">Popular</option>
+										<option value="5">Top of sell</option>
+									</select>
+								</div>
+							</div>
+							<div class="show-list">
+								<span>show</span>
+								<div class="select-list">
+									<select class="categories-select number">
+										<option value="1">12</option>
+										<option value="2">24</option>
+										<option value="3">48</option>
+									</select>
+								</div>
+							</div>
+							<div class="view-mode">
+								<span class="plate active"></span>
+								<span class="list-show"></span>
+							</div>
+						</div>
+						<div class="products__items">
+							<div class="products-item">
+								<div class="img-wrapp">
+									<a href="#"><img src="img/prod1.png" alt="product"></a>
+									<div class="options_hover">
+										<button class="quick-view">Quick view</button>
+										<button class="add-cart">Add to cart</button>
+									</div>
+								</div>
+								<div class="products-item__wrapp">
+									<strong class="products-item__name">Aenean Ru Bristique</strong>
+									<div class="products-item__rating">
+										<ul>
+											<li class="full"></li>
+											<li class="full"></li>
+											<li></li>
+											<li></li>
+											<li></li>
+										</ul>
+									</div>
+									<span class="products-item__devider"></span>
+									<div class="products-item__options">
+										<div class="products-item__buttons">
+											<button class="favorit"></button>
+											<button class="test"></button>
+										</div>
+										<div class="products-item__price">$25.00</div>
+									</div>
+								</div>
+							</div>
+							<div class="products-item">
+								<div class="img-wrapp">
+									<a href="#"><img src="img/prod2.png" alt="product"></a>
+									<div class="options_hover">
+										<button class="quick-view">Quick view</button>
+										<button class="add-cart">Add to cart</button>
+									</div>
+									<div class="sale">sale</div>
+								</div>
+								<div class="products-item__wrapp">
+									<strong class="products-item__name">Aenean Ru Bristique</strong>
+									<div class="products-item__rating">
+										<ul>
+											<li class="full"></li>
+											<li class="full"></li>
+											<li></li>
+											<li></li>
+											<li></li>
+										</ul>
+									</div>
+									<span class="products-item__devider"></span>
+									<div class="products-item__options">
+										<div class="products-item__buttons">
+											<button class="favorit"></button>
+											<button class="test"></button>
+										</div>
+										<div class="sale-price">$25.00</div>
+										<div class="products-item__price">$15.00</div>
+									</div>
+								</div>
+							</div>
+							<div class="popup-product">				<!-----popup------>
+								<div class="popup-product__body">
+									<div class="popup-product__content">
+										<div class="product-img">
+											<div class="img-big">
+												<img src="img/prod2.png" alt="cauch">
+												<button class="zoom">
+													<a href="img/prod2.png" class="fancybox" data-fancybox="gallery"></a>
+												</button>
+											</div>
+											<div class="img-slider">
+												<div class="img-slider__item filter">
+													<img src="img/prod1.png" alt="">
+												</div>
+												<div class="img-slider__item">
+													<img src="img/prod2.png" alt="">
+												</div>
+												<div class="img-slider__item filter">
+													<img src="img/prod1.png" alt="">
+												</div>
+												<div class="img-slider__item">
+													<img src="img/prod2.png" alt="">
+												</div>
+												<div class="img-slider__item">
+													<img src="img/prod1.png" alt="">
+												</div>
+												<div class="img-slider__item">
+													<img src="img/prod2.png" alt="">
+												</div>
+												<div class="img-slider__item">
+													<img src="img/prod1.png" alt="">
+												</div>
+											</div>
+										</div>
+										<div class="product-info">
+											<div class="product-title">
+												<h3>Sunbaby Magic Bear Chair</h3>
+												<div class="rating-info">
+													<div class="rating">
+														<input class="rating-star" type="radio" value="1" name="rating" aria-label="one">
+														<input class="rating-star" type="radio" value="2" name="rating" aria-label="two" checked>
+														<input class="rating-star" type="radio" value="3" name="rating" aria-label="three">
+														<input class="rating-star" type="radio" value="4" name="rating" aria-label="four">
+														<input class="rating-star" type="radio" value="5" name="rating" aria-label="five">
+													</div>
+													<span class="reviews">(0 reviews)</span>
+													<span class="add-review"><a href="#">Add your review</a></span>
+												</div>
+											</div>
+											<div class="product-price">
+												<div class="sale-price">$350.00</div>
+												<div class="products-item__price">$250.00</div>
+											</div>
+											<div class="product-options">
+												<div class="options_hover">
+													<button class="add-cart">Add to cart</button>
+												</div>
+												<div class="products-item__buttons">
+													<button class="favorit"></button>
+													<button class="test"></button>
+												</div>
+												
+											</div>
+											<div class="product-quantity">
+												<strong>Quantity:</strong>
+												<div class="product-quantity__number">
+													<input type="text" value="1">
+												</div>
+												<div class="product-quantity__buttons">
+													<button class="down">
+														<svg aria-hidden="true" focusable="false"  width="15" height="15" data-prefix="fas" data-icon="minus" class="svg-inline--fa fa-minus fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+															<path fill="currentColor" d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
+														</svg>
+													</button>
+													<button class="up">
+														<svg aria-hidden="true" focusable="true" width="15" height="15" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+															<path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
+														</svg>
+													</button>
+												</div>
+											</div>
+											<div class="product-overwiew">
+												<strong>Quick Overview</strong>
+												<p>Nam tristique porta ligula, vel viverra sem eleifend nec. Nulla sed purus augue, eu euis mod tellus. Nam mattis eros tis sagittis. Vestibulum suscipit cursus biben.</p>
+											</div>
+											<div class="product-availability">
+												<div class="availab-now">
+													<strong>Availability:</strong>
+													<span>In Stock</span>
+												</div>
+												<div class="category-now">
+													<strong>Category:</strong>
+													<span>Furniture</span>
+												</div>
+											</div>
+											<div class="social-share">
+												<ul class="social-icons">
+													<li class="fbook"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i>Share</a></li>
+													<li class="google"><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i>Google+</a></li>
+													<li class="twitter"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i>Tweet</a></li>
+													<li class="pinterest"><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i>Pinterest</a></li>
+													<li class="linkedin"><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i>Linkedin</a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="popup-close">
+											<svg height="15" viewBox="0 0 365.696 365.696" width="15" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+												<path d="m243.1875 182.859375 113.132812-113.132813c12.5-12.5 12.5-32.765624 0-45.246093l-15.082031-15.082031c-12.503906-12.503907-32.769531-12.503907-45.25 0l-113.128906 113.128906-113.132813-113.152344c-12.5-12.5-32.765624-12.5-45.246093 0l-15.105469 15.082031c-12.5 12.503907-12.5 32.769531 0 45.25l113.152344 113.152344-113.128906 113.128906c-12.503907 12.503907-12.503907 32.769531 0 45.25l15.082031 15.082031c12.5 12.5 32.765625 12.5 45.246093 0l113.132813-113.132812 113.128906 113.132812c12.503907 12.5 32.769531 12.5 45.25 0l15.082031-15.082031c12.5-12.503906 12.5-32.769531 0-45.25zm0 0"></path>
+											</svg>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="products-item">
+								<div class="img-wrapp">
+									<a href="#"><img src="img/prod3.png" alt="product"></a>
+									<div class="options_hover">
+										<button class="quick-view">Quick view</button>
+										<button class="add-cart">Add to cart</button>
+									</div>
+								</div>
+								<div class="products-item__wrapp">
+									<strong class="products-item__name">Aenean Ru Bristique</strong>
+									<div class="products-item__rating">
+										<ul>
+											<li class="full"></li>
+											<li class="full"></li>
+											<li></li>
+											<li></li>
+											<li></li>
+										</ul>
+									</div>
+									<span class="products-item__devider"></span>
+									<div class="products-item__options">
+										<div class="products-item__buttons">
+											<button class="favorit"></button>
+											<button class="test"></button>
+										</div>
+										<div class="products-item__price">$25.00</div>
+									</div>
+								</div>
+							</div>
+							<div class="products-item">
+								<div class="img-wrapp">
+									<a href="#"><img src="img/prod4.png" alt="product"></a>
+									<div class="options_hover">
+										<button class="quick-view">Quick view</button>
+										<button class="add-cart">Add to cart</button>
+									</div>
+								</div>
+								<div class="products-item__wrapp">
+									<strong class="products-item__name">Aenean Ru Bristique</strong>
+									<div class="products-item__rating">
+										<ul>
+											<li class="full"></li>
+											<li class="full"></li>
+											<li></li>
+											<li></li>
+											<li></li>
+										</ul>
+									</div>
+									<span class="products-item__devider"></span>
+									<div class="products-item__options">
+										<div class="products-item__buttons">
+											<button class="favorit"></button>
+											<button class="test"></button>
+										</div>
+										<div class="products-item__price">$25.00</div>
+									</div>
+								</div>
+							</div>
+							<div class="products-item">
+								<div class="img-wrapp">
+									<a href="#"><img src="img/prod1.png" alt="product"></a>
+									<div class="options_hover">
+										<button class="quick-view">Quick view</button>
+										<button class="add-cart">Add to cart</button>
+									</div>
+									<div class="sale">sale</div>
+								</div>
+								<div class="products-item__wrapp">
+									<strong class="products-item__name">Aenean Ru Bristique</strong>
+									<div class="products-item__rating">
+										<ul>
+											<li class="full"></li>
+											<li class="full"></li>
+											<li></li>
+											<li></li>
+											<li></li>
+										</ul>
+									</div>
+									<span class="products-item__devider"></span>
+									<div class="products-item__options">
+										<div class="products-item__buttons">
+											<button class="favorit"></button>
+											<button class="test"></button>
+										</div>
+										<div class="sale-price">$25.00</div>
+										<div class="products-item__price">$18.00</div>
+									</div>
+								</div>
+							</div>
+							<div class="products-item">
+								<div class="img-wrapp">
+									<a href="#"><img src="img/prod2.png" alt="product"></a>
+									<div class="options_hover">
+										<button class="quick-view">Quick view</button>
+										<button class="add-cart">Add to cart</button>
+									</div>
+								</div>
+								<div class="products-item__wrapp">
+									<strong class="products-item__name">Aenean Ru Bristique</strong>
+									<div class="products-item__rating">
+										<ul>
+											<li class="full"></li>
+											<li class="full"></li>
+											<li></li>
+											<li></li>
+											<li></li>
+										</ul>
+									</div>
+									<span class="products-item__devider"></span>
+									<div class="products-item__options">
+										<div class="products-item__buttons">
+											<button class="favorit"></button>
+											<button class="test"></button>
+										</div>
+										<div class="products-item__price">$25.00</div>
+									</div>
+								</div>
+							</div>
+							<div class="products-item">
+								<div class="img-wrapp">
+									<a href="#"><img src="img/prod4.png" alt="product"></a>
+									<div class="options_hover">
+										<button class="quick-view">Quick view</button>
+										<button class="add-cart">Add to cart</button>
+									</div>
+								</div>
+								<div class="products-item__wrapp">
+									<strong class="products-item__name">Aenean Ru Bristique</strong>
+									<div class="products-item__rating">
+										<ul>
+											<li class="full"></li>
+											<li class="full"></li>
+											<li></li>
+											<li></li>
+											<li></li>
+										</ul>
+									</div>
+									<span class="products-item__devider"></span>
+									<div class="products-item__options">
+										<div class="products-item__buttons">
+											<button class="favorit"></button>
+											<button class="test"></button>
+										</div>
+										<div class="products-item__price">$25.00</div>
+									</div>
+								</div>
+							</div>
+							<div class="products-item">
+								<div class="img-wrapp">
+									<a href="#"><img src="img/prod1.png" alt="product"></a>
+									<div class="options_hover">
+										<button class="quick-view">Quick view</button>
+										<button class="add-cart">Add to cart</button>
+									</div>
+								</div>
+								<div class="products-item__wrapp">
+									<strong class="products-item__name">Aenean Ru Bristique</strong>
+									<div class="products-item__rating">
+										<ul>
+											<li class="full"></li>
+											<li class="full"></li>
+											<li></li>
+											<li></li>
+											<li></li>
+										</ul>
+									</div>
+									<span class="products-item__devider"></span>
+									<div class="products-item__options">
+										<div class="products-item__buttons">
+											<button class="favorit"></button>
+											<button class="test"></button>
+										</div>
+										<div class="products-item__price">$25.00</div>
+									</div>
+								</div>
+							</div>
+							<div class="products-item">
+								<div class="img-wrapp">
+									<a href="#"><img src="img/prod3.png" alt="product"></a>
+									<div class="options_hover">
+										<button class="quick-view">Quick view</button>
+										<button class="add-cart">Add to cart</button>
+									</div>
+									<div class="sale">sale</div>
+								</div>
+								<div class="products-item__wrapp">
+									<strong class="products-item__name">Aenean Ru Bristique</strong>
+									<div class="products-item__rating">
+										<ul>
+											<li class="full"></li>
+											<li class="full"></li>
+											<li></li>
+											<li></li>
+											<li></li>
+										</ul>
+									</div>
+									<span class="products-item__devider"></span>
+									<div class="products-item__options">
+										<div class="products-item__buttons">
+											<button class="favorit"></button>
+											<button class="test"></button>
+										</div>
+										<div class="sale-price">$25.00</div>
+										<div class="products-item__price">$20.00</div>
+									</div>
+								</div>
+							</div>
+							<div class="products-item">
+								<div class="img-wrapp">
+									<a href="#"><img src="img/prod2.png" alt="product"></a>
+									<div class="options_hover">
+										<button class="quick-view">Quick view</button>
+										<button class="add-cart">Add to cart</button>
+									</div>
+								</div>
+								<div class="products-item__wrapp">
+									<strong class="products-item__name">Aenean Ru Bristique</strong>
+									<div class="products-item__rating">
+										<ul>
+											<li class="full"></li>
+											<li class="full"></li>
+											<li></li>
+											<li></li>
+											<li></li>
+										</ul>
+									</div>
+									<span class="products-item__devider"></span>
+									<div class="products-item__options">
+										<div class="products-item__buttons">
+											<button class="favorit"></button>
+											<button class="test"></button>
+										</div>
+										<div class="products-item__price">$25.00</div>
+									</div>
+								</div>
+							</div>
+							<div class="products-item">
+								<div class="img-wrapp">
+									<a href="#"><img src="img/prod1.png" alt="product"></a>
+									<div class="options_hover">
+										<button class="quick-view">Quick view</button>
+										<button class="add-cart">Add to cart</button>
+									</div>
+								</div>
+								<div class="products-item__wrapp">
+									<strong class="products-item__name">Aenean Ru Bristique</strong>
+									<div class="products-item__rating">
+										<ul>
+											<li class="full"></li>
+											<li class="full"></li>
+											<li></li>
+											<li></li>
+											<li></li>
+										</ul>
+									</div>
+									<span class="products-item__devider"></span>
+									<div class="products-item__options">
+										<div class="products-item__buttons">
+											<button class="favorit"></button>
+											<button class="test"></button>
+										</div>
+										<div class="products-item__price">$25.00</div>
+									</div>
+								</div>
+							</div>
+							<div class="products-item">
+								<div class="img-wrapp">
+									<a href="#"><img src="img/prod4.png" alt="product"></a>
+									<div class="options_hover">
+										<button class="quick-view">Quick view</button>
+										<button class="add-cart">Add to cart</button>
+									</div>
+								</div>
+								<div class="products-item__wrapp">
+									<strong class="products-item__name">Aenean Ru Bristique</strong>
+									<div class="products-item__rating">
+										<ul>
+											<li class="full"></li>
+											<li class="full"></li>
+											<li></li>
+											<li></li>
+											<li></li>
+										</ul>
+									</div>
+									<span class="products-item__devider"></span>
+									<div class="products-item__options">
+										<div class="products-item__buttons">
+											<button class="favorit"></button>
+											<button class="test"></button>
+										</div>
+										<div class="products-item__price">$25.00</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sidebar">
+						<div class="filter-categories">
+							<h3 class="sidebar-title">Filter by categories</h3>
+							<ul class="categories">
+								<li class="categories_current"><a href="#">Furniture<span class="quantity_sidebar">3</span></a></li>
+								<li><a href="#">Sofa<span class="quantity_sidebar">4</span></a></li>
+								<li><a href="#">Chair<span class="quantity_sidebar">5</span></a></li>
+								<li><a href="#">Table<span class="quantity_sidebar">5</span></a></li>
+								<li><a href="#">Bedroom<span class="quantity_sidebar">5</span></a></li>
+								<li><a href="#">Else<span class="quantity_sidebar">5</span></a></li>
+							</ul>
+						</div>
+						<div class="filter-color">
+							<h3 class="sidebar-title">Filter by categories</h3>
+							<ul class="color">
+								<li class="red current-color"><a href="#">Red</a></li>
+								<li class="black"><a href="#">Black</a></li>
+								<li class="yellow"><a href="#">Yellow</a></li>
+								<li class="blue"><a href="#">Blue</a></li>
+								<li class="pink"><a href="#">Pink</a></li>
+								<li class="green"><a href="#">Green</a></li>
+							</ul>
+						</div>
+						<div class="filter-size">
+							<h3 class="sidebar-title">Filter by categories</h3>
+							<ul class="size">
+								<li>
+									<input class="checkbox" id="s" type="checkbox" name="terms">
+									<label for="s" class="label">S</label>
+									<span class="quantity_sidebar">5</span>
+								</li>
+								<li>
+									<input class="checkbox" id="m" type="checkbox" name="terms">
+									<label for="m" class="label">M</label>
+									<span class="quantity_sidebar">4</span>
+								</li>
+								<li>
+									<input class="checkbox" id="l" type="checkbox" name="terms">
+									<label for="l" class="label">L</label>
+									<span class="quantity_sidebar">4</span>
+								</li>
+								<li>
+									<input class="checkbox" id="xl" type="checkbox" name="terms">
+									<label for="xl" class="label">XL</label>
+									<span class="quantity_sidebar">5</span>
+								</li>
+								<li>
+									<input class="checkbox" id="xxl" type="checkbox" name="terms">
+									<label for="xxl" class="label">XXL</label>
+									<span class="quantity_sidebar">5</span>
+								</li>
+							</ul>
+						</div>
+						<div class="filter-tag">
+							<h3 class="sidebar-title">Filter by tag</h3>
+							<div class="tag-list">
+								<div class="tag"><a href="#">Table</a></div>
+								<div class="tag"><a href="#">Woman</a></div>
+								<div class="tag"><a href="#">Chair</a></div>
+								<div class="tag"><a href="#">Hand Bag</a></div>
+								<div class="tag"><a href="#">Fashion</a></div>
+								<div class="tag"><a href="#">Clothes</a></div>
+							</div>
+						</div>
+						<div class="featured-product">
+							<h3 class="featured-product__title">Featured products</h3>
+							<div class="featured-product__item">
+								<div class="featured-product__img">
+									<a href="#"><img src="img/prod1.png" alt="product"></a>
+								</div>
+								<div class="featured-product__info">
+									<strong>Office chair</strong>
+									<span class="price">$350.00</span>
+									<ul class="rating">
+										<li class="full"></li>
+										<li class="full"></li>
+										<li></li>
+										<li></li>
+										<li></li>
+									</ul>
+									<button class="add-cart">Add to cart</button>
+								</div>
+							</div>
+							<div class="featured-product__item">
+								<div class="featured-product__img">
+									<a href="#"><img src="img/prod2.png" alt="product"></a>
+								</div>
+								<div class="featured-product__info">
+									<strong>Office chair</strong>
+									<span class="price">$350.00</span>
+									<ul class="rating">
+										<li class="full"></li>
+										<li class="full"></li>
+										<li></li>
+										<li></li>
+										<li></li>
+									</ul>
+									<button class="add-cart">Add to cart</button>
+								</div>
+							</div>
+							<div class="featured-product__item">
+								<div class="featured-product__img">
+									<a href="#"><img src="img/prod1.png" alt="product"></a>
+								</div>
+								<div class="featured-product__info">
+									<strong>Office chair</strong>
+									<span class="price">$350.00</span>
+									<ul class="rating">
+										<li class="full"></li>
+										<li class="full"></li>
+										<li></li>
+										<li></li>
+										<li></li>
+									</ul>
+									<button class="add-cart">Add to cart</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="slider">
+					<div class="slider__item filter">
+						<a href=""><img src="img/Brand-logo1.png" alt=""></a>
+					</div>
+					<div class="slider__item">
+						<a href=""><img src="img/Brand-logo2.png" alt=""></a>
+					</div>
+					<div class="slider__item filter">
+						<a href=""><img src="img/Brand-logo4.png" alt=""></a>
+					</div>
+					<div class="slider__item">
+						<a href=""><img src="img/Brand-logo3.png" alt=""></a>
+					</div>
+					<div class="slider__item">
+						<a href=""><img src="img/Brand-logo1.png" alt=""></a>
+					</div>
+					<div class="slider__item">
+						<a href=""><img src="img/Brand-logo2.png" alt=""></a>
+					</div>
+					<div class="slider__item">
+						<a href=""><img src="img/Brand-logo4.png" alt=""></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="subscribe">
+		<div class="subscribe__content">
+			<form action="asd" method="post" class="subscribe__form">
+				<span class="subscribe__title">Newsletter:</span>
+				<input type="email" name="email" placeholder="Enter your email address">
+				<input type="submit" value="Send a message">
+			</form>
+		</div>
+	</div>
+	<div class="touch-sidebar">
+		<span>Options</span>
+	</div>
+	<footer class="footer">
+		<div class="footer__top">
+			<div class="content">
+				<div class="links">
+					<div class="links__item">
+						<h3 class="links__title">Menu</h3>
+						<ul class="links__list">
+							<li><a href="#">About us</a></li>
+							<li><a href="#">Privacy</a></li>
+							<li><a href="#">Conditions</a></li>
+							<li><a href="#">Online support</a></li>
+						</ul>
+					</div>
+					<div class="links__item">
+						<h3 class="links__title">My account</h3>
+						<ul class="links__list">
+							<li><a href="#">About us</a></li>
+							<li><a href="#">Privacy</a></li>
+							<li><a href="#">Conditions</a></li>
+							<li><a href="#">Online support</a></li>
+						</ul>
+					</div>
+					<div class="links__item">
+						<h3 class="links__title">Information</h3>
+						<ul class="links__list">
+							<li><a href="#">About us</a></li>
+							<li><a href="#">Privacy</a></li>
+							<li><a href="#">Conditions</a></li>
+							<li><a href="#">Online support</a></li>
+						</ul>
+					</div>
+					<div class="links__item">
+						<h3 class="links__title">Orders</h3>
+						<ul class="links__list">
+							<li><a href="#">About us</a></li>
+							<li><a href="#">Privacy</a></li>
+							<li><a href="#">Conditions</a></li>
+							<li><a href="#">Online support</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="paycards">
+					<ul>
+						<li><a href="#"><img src="img/pay-card1.png" alt=""></a></li>
+						<li><a href="#"><img src="img/pay-card2.png" alt=""></a></li>
+						<li><a href="#"><img src="img/pay-card3.png" alt=""></a></li>
+						<li><a href="#"><img src="img/pay-card4.png" alt=""></a></li>
+						<li><a href="#"><img src="img/pay-card5.png" alt=""></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer__bottom">
+			<div class="content bottom">
+				<p class="copyrightes">&copy;Copyright 2016 Bazar | All Rights Reserved</p>
+				<ul class="social">
+					<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></i></a></li>
+					<li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></i></a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+	<script async src="js/jquery.fancybox.min.js"></script>
+	<script async src="js/jquery.nice-select.min.js"></script>
+</body>
+</html>
