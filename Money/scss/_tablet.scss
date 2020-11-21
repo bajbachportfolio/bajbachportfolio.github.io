@@ -1,3 +1,6 @@
+.header {
+	padding: 0 0 0 102px;
+}
 .header .content {
 	position: relative;
 }
@@ -5,7 +8,7 @@
 	display: block;
 	position: absolute;
 	right: 0;
-	top: 0;
+	top: 128px;
 	background: $main_bg1;
 	padding: 80px 60px 35px 30px;
 	z-index: 50;

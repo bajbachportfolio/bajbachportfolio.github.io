@@ -4,11 +4,10 @@
 .header-holder, .main, .message, .footer {
 	padding-left: 20px;
 }
-.header-holder {
+.header .content{
 	padding: 10px 20px;
 }
 .menu-holder {
-	padding: 35px 30px;
 	display: none;
 	&.active {
 		display: block;
@@ -16,7 +15,7 @@
 }
 .header__menu {
 	width: 100%;
-	top: 63px;
+	top: 60px;
 	padding: 0; 
 }
 .touch-menu {
@@ -86,4 +85,7 @@
 }
 .message-form input[type="submit"] {
 	width: 68%;
+}
+.message-form .name, .message-form .email {
+	width: 100%;
 }

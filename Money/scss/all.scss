@@ -64,11 +64,15 @@ a, a:hover {
 .content {
 	width: 100%;
 	max-width: 1350px;
+	margin: 0 auto;
 }
 .header {
-	display: flex;
-	justify-content: center;
-	padding: 0 0 0 102px;
+	padding: 0 20px 0 102px;
+	& .content {
+		display: flex;
+		justify-content: space-between;
+		padding: 40px 0 30px 0;
+	}
 	&__menu {
 		display: flex;
 		& li {
@@ -124,11 +128,6 @@ a, a:hover {
 		transition: all .3s ease 0s;
 	}
 }
-.header-holder {
-	display: flex;
-	justify-content: space-between;
-	padding: 40px 0 30px 0;
-}
 .menu-holder {
 	display: flex;
 	align-items: center;
@@ -181,8 +180,6 @@ a, a:hover {
 	color: $text2;
 }
 .main {
-	display: flex;
-	justify-content: center;
 	padding: 35px 20px 85px 102px;
 	background: #fff;
 }
@@ -232,7 +229,7 @@ a, a:hover {
 .select-wrap {
 	display: flex;
 	justify-content: flex-end;
-	background: url(../img/map-marker2.png) no-repeat 0 80%;
+	background: url(../img/map-marker.png) no-repeat 0 80%;
 	margin: 0 0 30px;
 }
 .select-list {
@@ -448,8 +445,6 @@ a, a:hover {
 	}
 }
 .message {
-	display: flex;
-	justify-content: center;
 	padding: 95px 20px 95px 102px;
 	& .title {
 		color: $text2;
@@ -704,7 +699,7 @@ a, a:hover {
 		color: $text2;
 	}
 }
-@media screen and (max-width: 864px) {
+@media screen and (max-width: 1024px) {
 	@import '_tablet.scss';
 }
 @media screen and (max-width: 664px) {
