@@ -160,6 +160,7 @@ a, a:hover {
 		width: 9px;
 		height: 5px;
 		margin: -5px 0 0 10px;
+		transform: rotate(180deg);
 	}
 	&__item {
 		padding: 10px 20px;
@@ -171,7 +172,7 @@ a, a:hover {
 		display: block;
 	}
 	&.active .city-select__icon {
-		transform: rotate(180deg);
+		transform: rotate(0deg);
 	}
 }
 .tel-number {
@@ -248,9 +249,13 @@ a, a:hover {
 }
 .select-list__header {
 	position: relative;
+	padding: 0;
 }
 .select-list__current {
+	padding: 10px 10px 10px 20px;
 	font-weight: bold;
+	display: inline-block;
+	width: 100%;
 }
 .select-list__icon {
 	background: url(../img/select-arrow.png) no-repeat;
@@ -266,6 +271,9 @@ a, a:hover {
 	top: 101%;
 	left: 0;
 	display: none;
+	&.active {
+		display: block;
+	}
 }
 .select-list__item {
 	padding: 0 0 10px;
@@ -280,9 +288,6 @@ a, a:hover {
 }
 .select-list.active .select-list__icon {
 	transform: rotate(180deg);
-}
-.select-list.active .select-list__body {
-	display: block;
 }
 .info {
 	margin: 0 0 20px;

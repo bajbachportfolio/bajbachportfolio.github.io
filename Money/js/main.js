@@ -1,39 +1,36 @@
 $(document).ready(function() {
 ///Выбор отделения 
 			$('.select-list__header').click(function(event) {
-				$(this).parent().toggleClass('active');
+				$(' .select-list, .select-list__body').toggleClass('active');
 		});
 			$('.select-list__item').click(function(event) {
 				var currentElem = $(this).html();
 				$('.select-list__current').html(currentElem);
-				$(this).parents().removeClass('active');
+				$('.select-list__body').removeClass('active');
 		});
-			$(document).mouseup(function(e) {
-				var selectBody = $('.select-list__body');
+			$(document).click(function(e) {
 
-				if (e.target!=selectBody&&selectBody.has(e.target).length === 0) {
-					$('.select-list').removeClass('active');
-				} else {
-					$('.select-list').addClass('active');
-				}
-		});
+			if (!$(e.target).hasClass('active')&&
+				$(e.target).parents(".select-list__header").length === 0) {
+				$('.select-list, .select-list__body').removeClass('active')
+			}
+			});
+
 ////Хедер выбор города
 			$('.city-select__header').click(function(event) {
-				$(this).parent().toggleClass('active');
+				$('.city-select, .city-select__body').toggleClass('active');
 		});
 			$('.city-select__item').click(function(event) {
 				var currentElem = $(this).html();
 				$('.city-select__current').html(currentElem);
-				$(this).parents('.city-select').removeClass('active');
+				$('.city-select__body').removeClass('active');
 		});
-			$(document).mouseup(function(e) {
-				var selectBody = $('.city-select__body');
+			$(document).click(function(e) {
 
-				if (e.target!=selectBody[0]&&selectBody.has(e.target).length === 0) {
-					$('.city-select').removeClass('active');
-				} else {
-					$('.city-select').addClass('active');
-				}
+			if (!$(e.target).hasClass('active')&&
+				$(e.target).parents(".city-select__header").length === 0) {
+				$('.city-select, .city-select__body').removeClass('active')
+			}
 		});
 ////Попап карта
 			$('.zoom, .show_js').click(function() {
@@ -81,15 +78,17 @@ $(document).ready(function() {
 			$('.touch-menu').click(function(event) {
 				$('.touch-menu, .header__menu, .menu-holder').toggleClass('active');
 			});
-//
-			$(window).resize(function(event) {
+
+/// Добавление болоков в меню
 				if ($(window).width() < 664) {
 					$('i').fadeOut();
 					$('.logo').html('<a href="#"><img src="img/logo_mobile.png" alt="logo"></a>');
 					
 					var down = $('.download').html();
 					$('.down').html(down);
-			} else {
+			}
+			$(window).resize(function() {
+				if ($(window).width() > 664) {
 					$('.logo').html('<a href="#"><img src="img/logo.png" alt="logo"></a>');
 					$('.down').remove();
 				}
