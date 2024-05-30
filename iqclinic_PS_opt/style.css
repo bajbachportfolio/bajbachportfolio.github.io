@@ -22,21 +22,21 @@ Use it to make something cool, have fun, and share what you've learned with othe
   src: url("./assets/fonts/ZonaPro-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
-  font-display: swap; }
+   }
 
 @font-face {
   font-family: 'ZonaPro';
   src: url("./assets/fonts/ZonaPro-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
-  font-display: swap; }
+   }
 
 @font-face {
   font-family: 'Open Sans';
   src: url("./assets/fonts/OpenSans-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
-  font-display: swap; }
+   }
 
 /* === END FONTS === */
 .modal {
