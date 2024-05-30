@@ -6,16 +6,16 @@
     <meta name="theme-color" content="#188de7">
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>EyeQclinic</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/slick.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/animate.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/nice-select.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/jquery.fancybox.min.css" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="preload" as="style" onload="this.rel='stylesheet'" href="assets/css/bootstrap.min.css" />
+    <link rel="preload" as="style" onload="this.rel='stylesheet'" href="assets/css/slick.css" />
+    <link rel="preload" as="style" onload="this.rel='stylesheet'" href="assets/css/slick-theme.css" />
+    <link rel="preload" as="style" onload="this.rel='stylesheet'" href="assets/css/animate.css" />
+    <link rel="preload" as="style" onload="this.rel='stylesheet'" href="assets/css/nice-select.css" />
+    <link rel="preload" as="style" onload="this.rel='stylesheet'" href="assets/css/jquery.fancybox.min.css" />
+    <link rel="preload" as="style" onload="this.rel='stylesheet'" href="style.css" />
     <link rel="icon" type="image/png" href="assets/img/favicon.png" />
-    <script src="assets/js/jquery-3.3.1.min.js"></script>
-    <script src="assets/js/wow.min.js"></script>
+    <script defer src="assets/js/jquery-3.3.1.min.js"></script>
+    <script defer src="assets/js/wow.min.js"></script>
     <script>
         new WOW().init();
     </script>
@@ -87,7 +87,7 @@
             }
 
             .hero {
-  background: url(assets/img/hero-bg.jpg) no-repeat;
+  background: url(assets/img/hero-bg.webp) no-repeat;
   background-size: cover;
   width: 100%;
   position: relative;
@@ -294,7 +294,7 @@
     <header class="header">
         <div class="container">
             <div class="logo">
-                <a href=""><img src="assets/img/logo.png" alt="logo"></a>
+                <a href=""><img loading="lazy" src="assets/img/logo.png" alt="logo"></a>
             </div>
             <ul class="menu">
                 <li><a href="#solutions" data-target="anchor">Об услуге</a></li>
@@ -340,7 +340,7 @@
                             <div class="issue-item-wrap first col-lg-3 col-sm-12">
                                 <div class="issue-item">
                                     <span class="issue-item__img">
-                                        <img src="assets/img/issue-item1.png" alt="eye">
+                                        <img loading="lazy" src="assets/img/issue-item1.png" alt="eye">
                                     </span>
                                     <span class="issue-item__text">
                                         Хотите восстановить зрение и сэкономить на контактных линзах?
@@ -352,7 +352,7 @@
                                     <div class="issue-item-wrap col-xl-4 col-md-6 col-sm-12">
                                         <div class="issue-item">
                                             <span class="issue-item__img">
-                                                <img src="assets/img/issue-item2.png" alt="eye">
+                                                <img loading="lazy" src="assets/img/issue-item2.png" alt="eye">
                                             </span>
                                             <span class="issue-item__text">
                                                 Устали постоянно протирать очки осенью или зимой, рискуя разбить их?
@@ -362,7 +362,7 @@
                                     <div class="issue-item-wrap col-xl-4 col-md-6 col-sm-12">
                                         <div class="issue-item">
                                             <span class="issue-item__img">
-                                                <img src="assets/img/issue-item3.png" alt="eye">
+                                                <img loading="lazy" src="assets/img/issue-item3.png" alt="eye">
                                             </span>
                                             <span class="issue-item__text">
                                                 Ведёте активный образ жизни, а «помощники» для зрения доставляют дискомфорт?
@@ -372,7 +372,7 @@
                                     <div class="issue-item-wrap col-xl-4 col-md-6 col-sm-12">
                                         <div class="issue-item">
                                             <span class="issue-item__img">
-                                                <img src="assets/img/issue-item4.png" alt="eye">
+                                                <img loading="lazy" src="assets/img/issue-item4.png" alt="eye">
                                             </span>
                                             <span class="issue-item__text">
                                                 Трудно купить солцезащитные очки и всегда помнить о том, чтобы взять линзы в поездку?
@@ -382,7 +382,7 @@
                                     <div class="issue-item-wrap col-xl-4 col-md-6 col-sm-12">
                                         <div class="issue-item">
                                             <span class="issue-item__img">
-                                                <img src="assets/img/issue-item2.png" alt="eye">
+                                                <img loading="lazy" src="assets/img/issue-item2.png" alt="eye">
                                             </span>
                                             <span class="issue-item__text">
                                                 Устали постоянно протирать очки осенью или зимой, рискуя разбить их?
@@ -392,7 +392,7 @@
                                     <div class="issue-item-wrap col-xl-4 col-md-6 col-sm-12">
                                         <div class="issue-item">
                                             <span class="issue-item__img">
-                                                <img src="assets/img/issue-item3.png" alt="eye">
+                                                <img loading="lazy" src="assets/img/issue-item3.png" alt="eye">
                                             </span>
                                             <span class="issue-item__text">
                                                 Ведёте активный образ жизни, а «помощники» для зрения доставляют дискомфорт?
@@ -402,7 +402,7 @@
                                     <div class="issue-item-wrap col-xl-4 col-md-6 col-sm-12">
                                         <div class="issue-item">
                                             <span class="issue-item__img">
-                                                <img src="assets/img/issue-item4.png" alt="eye">
+                                                <img loading="lazy" src="assets/img/issue-item4.png" alt="eye">
                                             </span>
                                             <span class="issue-item__text">
                                                 Трудно купить солцезащитные очки и всегда помнить о том, чтобы взять линзы в поездку?
@@ -424,7 +424,7 @@
                     <div class="solutions-item-wrap col-sm-6">
                         <div class="solutions-item">
                             <div class="img-wrap">
-                                <img src="assets/img/solution-item1.jpg" alt="">
+                                <img loading="lazy" src="assets/img/solution-item1.webp" alt="">
                             </div>
                             <div class="solution-text">
                                 <h3 class="sub-title">Превью вашего зрения</h3>
@@ -435,7 +435,7 @@
                     <div class="solutions-item-wrap col-sm-6">
                         <div class="solutions-item">
                             <div class="img-wrap">
-                                <img src="assets/img/solution-item2.jpg" alt="">
+                                <img loading="lazy" src="assets/img/solution-item2.webp" alt="">
                             </div>
                             <div class="solution-text">
                                 <h3 class="sub-title">100% понимание результата</h3>
@@ -446,7 +446,7 @@
                     <div class="solutions-item-wrap col-sm-6">
                         <div class="solutions-item">
                             <div class="img-wrap">
-                                <img src="assets/img/solution-item3.jpg" alt="">
+                                <img loading="lazy" src="assets/img/solution-item3.webp" alt="">
                             </div>
                             <div class="solution-text">
                                 <h3 class="sub-title">Высокая точность</h3>
@@ -457,7 +457,7 @@
                     <div class="solutions-item-wrap col-sm-6">
                         <div class="solutions-item">
                             <div class="img-wrap">
-                                <img src="assets/img/solution-item4.jpg" alt="">
+                                <img loading="lazy" src="assets/img/solution-item4.webp" alt="">
                             </div>
                             <div class="solution-text">
                                 <h3 class="sub-title">Информационная поддержка</h3>
@@ -504,9 +504,9 @@
                                 </div>
                             </div>
                             <div class="stages-img">
-                                <img src="assets/img/how-it-work-item1.png" alt="">
+                                <img loading="lazy" src="assets/img/how-it-work-item1.png" alt="">
                                 <div class="img_fade wow fadeOut" data-wow-delay="1s" data-wow-duration="2s">
-                                    <img src="assets/img/how-it-work-item1_fade.png" alt="">
+                                    <img loading="lazy" src="assets/img/how-it-work-item1_fade.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -514,9 +514,9 @@
                     <div class="stages__item col-12">
                         <div class="stages-item_img col-6">
                             <div class="stages-img">
-                                <img src="assets/img/how-it-work-item2.png" alt="">
+                                <img loading="lazy" src="assets/img/how-it-work-item2.png" alt="">
                                 <div class="img_fade wow fadeOut" data-wow-delay="1s" data-wow-duration="2s">
-                                    <img src="assets/img/how-it-work-item2_fade.png" alt="">
+                                    <img loading="lazy" src="assets/img/how-it-work-item2_fade.png" alt="">
                                 </div>
                             </div>
                             <div class="stage-line_hrz">
@@ -541,9 +541,9 @@
                                 </div>
                             </div>
                             <div class="stages-img">
-                                <img src="assets/img/how-it-work-item3.png" alt="">
+                                <img loading="lazy" src="assets/img/how-it-work-item3.png" alt="">
                                 <div class="img_fade wow fadeOut" data-wow-delay="1s" data-wow-duration="2s">
-                                    <img src="assets/img/how-it-work-item3_fade.png" alt="">
+                                    <img loading="lazy" src="assets/img/how-it-work-item3_fade.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -551,9 +551,9 @@
                     <div class="stages__item col-12">
                         <div class="stages-item_img col-6">
                             <div class="stages-img">
-                                <img src="assets/img/how-it-work-item4.png" alt="">
+                                <img loading="lazy" src="assets/img/how-it-work-item4.png" alt="">
                                 <div class="img_fade wow fadeOut" data-wow-delay="1s" data-wow-duration="2s">
-                                    <img src="assets/img/how-it-work-item4_fade.png" alt="">
+                                    <img loading="lazy" src="assets/img/how-it-work-item4_fade.png" alt="">
                                 </div>
                             </div>
                             <div class="stage-line_hrz">
@@ -576,9 +576,9 @@
                     <div class="stages-item">
                         <div class="stages-item-img">
                             <div class="stages-img">
-                                <img src="assets/img/how-it-work-item1.png" alt="">
+                                <img loading="lazy" src="assets/img/how-it-work-item1.png" alt="">
                                 <div class="img_fade wow fadeOut" data-wow-delay="1s" data-wow-duration="2s">
-                                    <img src="assets/img/how-it-work-item1_fade.png" alt="">
+                                    <img loading="lazy" src="assets/img/how-it-work-item1_fade.png" alt="">
                                 </div>
                             </div>
                             <h3 class="sub-title">Запишитесь на приём и пройдите предварительное обследование</h3>
@@ -588,9 +588,9 @@
                     <div class="stages-item">
                         <div class="stages-item-img">
                             <div class="stages-img">
-                                <img src="assets/img/how-it-work-item2.png" alt="">
+                                <img loading="lazy" src="assets/img/how-it-work-item2.png" alt="">
                                 <div class="img_fade wow fadeOut" data-wow-delay="1s" data-wow-duration="2s">
-                                    <img src="assets/img/how-it-work-item2_fade.png" alt="">
+                                    <img loading="lazy" src="assets/img/how-it-work-item2_fade.png" alt="">
                                 </div>
                             </div>
                             <h3 class="sub-title">Избавьтесь от катаракты навсегда без боли и с гарантией результата</h3>
@@ -600,9 +600,9 @@
                     <div class="stages-item">
                         <div class="stages-item-img">
                             <div class="stages-img">
-                                <img src="assets/img/how-it-work-item3.png" alt="">
+                                <img loading="lazy" src="assets/img/how-it-work-item3.png" alt="">
                                 <div class="img_fade wow fadeOut" data-wow-delay="1s" data-wow-duration="2s">
-                                    <img src="assets/img/how-it-work-item3_fade.png" alt="">
+                                    <img loading="lazy" src="assets/img/how-it-work-item3_fade.png" alt="">
                                 </div>
                             </div>
                             <h3 class="sub-title">Пройдите короткий реабилитационный период для полного восстановления</h3>
@@ -612,9 +612,9 @@
                     <div class="stages-item">
                         <div class="stages-item-img">
                             <div class="stages-img">
-                                <img src="assets/img/how-it-work-item4.png" alt="">
+                                <img loading="lazy" src="assets/img/how-it-work-item4.png" alt="">
                                 <div class="img_fade wow fadeOut" data-wow-delay="1s" data-wow-duration="2s">
-                                    <img src="assets/img/how-it-work-item4_fade.png" alt="">
+                                    <img loading="lazy" src="assets/img/how-it-work-item4_fade.png" alt="">
                                 </div>
                             </div>
                             <h3 class="sub-title">Оставьте все трудности, связанные с катарактой, в прошлом</h3>
@@ -638,7 +638,7 @@
                     <div class="doctor-slider__item">
                         <div class="doctor-slider__item-wrap">
                             <div class="doctor-img col-lg-6">
-                                <img src="assets/img/doctor.png" alt="doctor">
+                                <img loading="lazy" src="assets/img/doctor.png" alt="doctor">
                             </div>
                             <div class="doctor-info col-lg-6 col-sm-12">
                                 <h3 class="sub-title_big">Латышева Наталия Валерьевна</h3>
@@ -657,7 +657,7 @@
                     <div class="doctor-slider__item">
                         <div class="doctor-slider__item-wrap">
                             <div class="doctor-img col-lg-6">
-                                <img src="assets/img/doctor2.png" alt="doctor">
+                                <img loading="lazy" src="assets/img/doctor2.png" alt="doctor">
                             </div>
                             <div class="doctor-info col-lg-6 col-sm-12">
                                 <h3 class="sub-title_big">Латышева Наталия Валерьевна</h3>
@@ -676,7 +676,7 @@
                     <div class="doctor-slider__item">
                         <div class="doctor-slider__item-wrap">
                             <div class="doctor-img col-lg-6">
-                                <img src="assets/img/doctor.png" alt="doctor">
+                                <img loading="lazy" src="assets/img/doctor.png" alt="doctor">
                             </div>
                             <div class="doctor-info col-lg-6 col-sm-12">
                                 <h3 class="sub-title_big">Латышева Наталия Валерьевна</h3>
@@ -710,7 +710,7 @@
                                 <p class="block-text">Единственный в Харькове томограф, позволяющий проводить ОСТ-ангиографию (ангиография без контраста). Современный неинвазивный метод визуализации сетчатки глаза. Высокое разрешение 3D скана позволяет точно следить за развитием болезни. Возможность обследования пациентов без расширения зрачка.</p>
                             </div>
                             <div class="equipment-img col-lg-6 col-sm-12">
-                                <img src="assets/img/equipment-item1.png" alt="">
+                                <img loading="lazy" src="assets/img/equipment-item1.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -721,7 +721,7 @@
                                 <p class="block-text">Революционная разработка американской компании «Alcon», одного из лидеров по производству офтальмологического оборудования. Эту установку используют ведущие катрактальные хирурги во всем мире</p>
                             </div>
                             <div class="equipment-img col-lg-6 col-sm-12">
-                                <img src="assets/img/equipment-item2.png" alt="">
+                                <img loading="lazy" src="assets/img/equipment-item2.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -732,7 +732,7 @@
                                 <p class="block-text">Революционная разработка американской компании «Alcon», одного из лидеров по производству офтальмологического оборудования. Эту установку используют ведущие катрактальные хирурги во всем мире</p>
                             </div>
                             <div class="equipment-img col-lg-6 col-sm-12">
-                                <img src="assets/img/equipment-item3.png" alt="">
+                                <img loading="lazy" src="assets/img/equipment-item3.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -743,7 +743,7 @@
                                 <p class="block-text">Революционная разработка американской компании «Alcon», одного из лидеров по производству офтальмологического оборудования. Эту установку используют ведущие катрактальные хирурги во всем мире</p>
                             </div>
                             <div class="equipment-img col-lg-6 col-sm-12">
-                                <img src="assets/img/equipment-item4.png" alt="">
+                                <img loading="lazy" src="assets/img/equipment-item4.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -756,7 +756,7 @@
                 <p class="block-text col-lg-10">Хотите разобраться, почему десятки тысяч пациентов с катарактой обращаются в cеть офтальмологических центров «Ай-Кью Клиник» для решения своих проблем со зрением? Пусть за нас скажут цифры:</p>
                 <div class="video col-lg-10">
                     <a href="https://www.youtube.com/watch?v=oa6LPvBbzgY&list=PLshrMxR7BmgGx1MIdct04bCHVL0M0tPHG" class="fancybox">
-                        <img src="assets/img/video-img.jpg" alt="">
+                        <img loading="lazy" src="assets/img/video-img.webp" alt="">
                         <div class="icon"></div>
                     </a>
                 </div>
@@ -806,7 +806,7 @@
                 <div class="testimonials-slider_text__item filter">
                     <div class="testimonials-top">
                         <div class="testimonials-img">
-                            <img src="assets/img/testimonials-person1.jpg" alt="">
+                            <img loading="lazy" src="assets/img/testimonials-person1.webp" alt="">
                         </div>
                         <div class="testimonials-info">
                             <strong class="client-name">Татьяна Константинопольская</strong>
@@ -820,7 +820,7 @@
                 <div class="testimonials-slider_text__item filter">
                     <div class="testimonials-top">
                         <div class="testimonials-img">
-                            <img src="assets/img/testimonials-person1.jpg" alt="">
+                            <img loading="lazy" src="assets/img/testimonials-person1.webp" alt="">
                         </div>
                         <div class="testimonials-info">
                             <strong class="client-name">Татьяна Константинопольская</strong>
@@ -834,7 +834,7 @@
                 <div class="testimonials-slider_text__item filter">
                     <div class="testimonials-top">
                         <div class="testimonials-img">
-                            <img src="assets/img/testimonials-person1.jpg" alt="">
+                            <img loading="lazy" src="assets/img/testimonials-person1.webp" alt="">
                         </div>
                         <div class="testimonials-info">
                             <strong class="client-name">Татьяна Константинопольская</strong>
@@ -848,7 +848,7 @@
                 <div class="testimonials-slider_text__item filter">
                     <div class="testimonials-top">
                         <div class="testimonials-img">
-                            <img src="assets/img/testimonials-person1.jpg" alt="">
+                            <img loading="lazy" src="assets/img/testimonials-person1.webp" alt="">
                         </div>
                         <div class="testimonials-info">
                             <strong class="client-name">Татьяна Константинопольская</strong>
@@ -863,19 +863,19 @@
             <div class="testimonials-slider_video active">
                 <div class="testimonials-slider_video__item filter">
                     <div class="icon"></div>
-                    <img src="assets/img/slider-img1.jpg" alt="img">
+                    <img loading="lazy" src="assets/img/slider-img1.webp" alt="img">
                 </div>
                 <div class="testimonials-slider_video__item filter">
                     <div class="icon"></div>
-                    <img src="assets/img/slider-img1.jpg" alt="img">
+                    <img loading="lazy" src="assets/img/slider-img1.webp" alt="img">
                 </div>
                 <div class="testimonials-slider_video__item filter">
                     <div class="icon"></div>
-                    <img src="assets/img/slider-img1.jpg" alt="img">
+                    <img loading="lazy" src="assets/img/slider-img1.webp" alt="img">
                 </div>
                 <div class="testimonials-slider_video__item filter">
                     <div class="icon"></div>
-                    <img src="assets/img/slider-img1.jpg" alt="img">
+                    <img loading="lazy" src="assets/img/slider-img1.webp" alt="img">
                 </div>
             </div>
         </div>
@@ -883,7 +883,7 @@
             <div class="content">
                 <div class="sign-block__body">
                     <div class="sign-block-img">
-                        <img src="assets/img/form-img.jpg" alt="doctor">
+                        <img loading="lazy" src="assets/img/form-img.webp" alt="doctor">
                     </div>
                     <div class="sign-block-form">
                         <h3 class="sub-title">Записаться на прием</h3>
@@ -924,7 +924,7 @@
                             </p>
                             <p class="sub-recap col-md-12">
                                 <span class="recaptcha">
-                                    <img src="assets/img/recaptcha.jpg" alt="recaptcha">
+                                    <img loading="lazy" src="assets/img/recaptcha.webp" alt="recaptcha">
                                 </span>
                                 <span class="center">
                                     <input type="submit" value="Записаться на прием" class="btn btn-green">
@@ -941,7 +941,7 @@
         <div class="content">
             <div class="row">
                 <div class="logo">
-                    <a href=""><img src="assets/img/logo_footer.png" alt="logo"></a>
+                    <a href=""><img loading="lazy" src="assets/img/logo_footer.png" alt="logo"></a>
                 </div>
                 <div class="copyrights">
                     <p>&copy; Сеть офтальмологических клиник «Ай-Кью Клиник», 2018 – 2020</p>
@@ -1015,7 +1015,7 @@
                             </p>
                             <p class="sub-recap col-md-12">
                                 <span class="recaptcha">
-                                    <img src="assets/img/recaptcha.jpg" alt="recaptcha">
+                                    <img loading="lazy" src="assets/img/recaptcha.webp" alt="recaptcha">
                                 </span>
                                 <span class="center">
                                     <input type="submit" value="Записаться на прием" class="btn btn-green">
