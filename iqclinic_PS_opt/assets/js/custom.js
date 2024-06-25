@@ -37,7 +37,7 @@ $(document).ready(function() {
         autoplay:false,
         speed:200
 	});
-	$('.fancybox').fancybox();
+	// $('.fancybox').fancybox();
 
     $('.deprt-select').niceSelect();
     $('.deprt-select-modal').niceSelect();
