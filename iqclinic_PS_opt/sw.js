@@ -1,4 +1,4 @@
-const staticCacheName = 'static_cache_v1';
+const staticCacheName = 'static_cache_v2';
 
 const assetsUrls = [
   '/iqclinic_PS_opt/index.html',
