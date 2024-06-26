@@ -207,7 +207,7 @@ $(document).ready(function() {
 window.addEventListener('load', async () => {
 	if ('serviceWorker' in navigator) {
 	  try {
-		const reg = await navigator.serviceWorker.register('../../sw.js')
+		const reg = await navigator.serviceWorker.register('https://github.com/bajbachportfolio/bajbachportfolio.github.io/blob/087e63abd9019d03721874030fbba9618041ea6c/iqclinic_PS_opt/sw.js')
 		console.log('Service worker register success', reg)
 	  } catch (e) {
 		console.log('Service worker register fail')
