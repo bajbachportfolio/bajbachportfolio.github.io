@@ -1,56 +1,76 @@
 const staticCacheName = 'static_cache_v1';
 
-// const assetsUrls = [
-//   '/iqclinic_PS_opt/index.html',
-//   '/iqclinic_PS_opt/style.css',
-//   '/iqclinic_PS_opt/style-critical.css',
-//   '/iqclinic_PS_opt/assets/js/custom.js'
-// ]
 
-self.addEventListener('install', async event => { 
-  // const cache = await caches.open(staticCacheName);
-  // await cache.addAll(assetsUrls);
-});
+
+// self.addEventListener('install', async event => { 
+//   console.log("SW installed");
+// });
   
-self.addEventListener('activate', async event => {
-    const cacheNames = await caches.keys();
+// self.addEventListener('activate', async event => {
+//     const cacheNames = await caches.keys();
 
-    await Promise.all(
-      cacheNames
-        .filter(cacheName => cacheName !== staticCacheName)
-        .map(cacheName => caches.delete(cacheName))
-    )
-  });
+//     await Promise.all(
+//       cacheNames
+//         .filter(cacheName => cacheName !== staticCacheName)
+//         .map(cacheName => caches.delete(cacheName))
+//     )
+//   });
 
-self.addEventListener('fetch', event => {
-    // event.respondWith(cacheFirst(event.request))
-    event.respondWith(
-      fetch(event.request)
-        .then(res => {
-          const resClone = res.clone();
-          caches
-            .open(staticCacheName)
-            .then(cache => {
-              cache.put(event.request, resClone)
-            })
-          return res
-        }).catch(err => caches.match(event.request).then(res => res))
-    )
-  })
+// self.addEventListener('fetch', event => {
+//     event.respondWith(
+//       fetch(event.request)
+//         .then(res => {
+//           const resClone = res.clone();
+//           caches
+//             .open(staticCacheName)
+//             .then(cache => {
+//               cache.put(event.request, resClone)
+//             })
+//           return res
+//         }).catch(err => caches.match(event.request).then(res => res))
+//     )
+//   })
 
-async function cacheFirst(request) {
-  const cached = await caches.match(request)
-  return cached ?? await fetch(request)
-}
+self.addEventListener('install', function(event) {
+  // Пропуск установки, если есть предыдущая версия кэша
+  self.skipWaiting();
+});
 
-async function networkFirst(request) {
-  const cache = await caches.open(dynamicCacheName)
-  try {
-    const response = await fetch(request)
-    await cache.put(request, response.clone())
-    return response
-  } catch (e) {
-    const cached = await cache.match(request)
-    return cached ?? await caches.match('/offline.html')
-  }
-}
+self.addEventListener('activate', function(event) {
+  // Очистка старого кэша при активации нового Service Worker
+  event.waitUntil(
+    caches.keys().then(function(cacheNames) {
+      return Promise.all(
+        cacheNames.map(function(cacheName) {
+          if (cacheName !== staticCacheName) {
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    })
+  );
+});
+
+self.addEventListener('fetch', function(event) {
+  event.respondWith(
+    caches.match(event.request).then(function(response) {
+      if (response) {
+        // Если ресурс есть в кэше, возвращаем его
+        return response;
+      }
+      // Если ресурса нет в кэше, запрашиваем его из сети и кэшируем
+      return fetch(event.request).then(function(networkResponse) {
+        return caches.open(staticCacheName).then(function(cache) {
+          // Кэшируем только успешные ответы
+          if (networkResponse.status === 200) {
+            cache.put(event.request, networkResponse.clone());
+          }
+          return networkResponse;
+        });
+      });
+    }).catch(function() {
+      // Здесь можно вернуть резервный офлайн-ресурс, если запрос не удался
+    })
+  );
+});
+
