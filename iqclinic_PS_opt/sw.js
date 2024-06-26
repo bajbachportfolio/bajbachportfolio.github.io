@@ -1,10 +1,10 @@
 const staticCacheName = 'static_cache_v1';
 
 const assetsUrls = [
-  'iqclinic_PS_opt/index.html',
-  'iqclinic_PS_opt/style.css',
-  'iqclinic_PS_opt/style-critical.css',
-  'iqclinic_PS_opt/assets/js/custom.js'
+  '/iqclinic_PS_opt/index.html',
+  '/iqclinic_PS_opt/style.css',
+  '/iqclinic_PS_opt/style-critical.css',
+  '/iqclinic_PS_opt/assets/js/custom.js'
 ]
 
 self.addEventListener('install', async event => { 
