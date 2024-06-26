@@ -5,6 +5,7 @@
     "background_color": "#1a4f79",
     "display": "standalone",
     "orientation": "portrait",
+    "form_factor": "wide",
     "start_url": ".",
     "icons": [
       {
