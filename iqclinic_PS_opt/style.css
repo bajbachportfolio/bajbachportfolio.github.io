@@ -393,6 +393,7 @@ a:hover {
 
 /****HERO BLOCK****/
 .wrapper {
+  padding-top: 128px;
   overflow-x: hidden; }
 
 .col-sm-12, .col-lg-6 {
@@ -1403,6 +1404,9 @@ $screen-large 1280px
     margin-top: -24px; } }
 
 @media screen and (max-width: 575px) {
+  .wrapper {
+    padding-top: 88px;
+  }
   .header {
     padding: 10px 0; }
     .header .container {
