@@ -7,14 +7,14 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>EyeQclinic</title>
     <link rel="preload" as="style" onload="this.rel='stylesheet'" href="style-critical-min.css" />
-    <link rel="preload" as="style" onload="this.rel='stylesheet'" href="assets/css/bootstrap.min.css" />
     <link rel="preload" as="style" onload="this.rel='stylesheet'" href="assets/css/slick.css" />
     <link rel="preload" as="style" onload="this.rel='stylesheet'" href="assets/css/slick-theme.css" />
     <link rel="preload" as="style" onload="this.rel='stylesheet'" href="assets/css/animate.css" />
     <link rel="preload" as="style" onload="this.rel='stylesheet'" href="assets/css/nice-select.css" />
     <link rel="preload" as="style" onload="this.rel='stylesheet'" href="style.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="icon" type="image/png" href="assets/img/favicon.png" />
-    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script async src="assets/js/jquery-3.3.1.min.js"></script>
     <script src="assets/js/wow.min.js"></script>
     <script>
         new WOW().init();
@@ -71,11 +71,7 @@
             @media (max-width: 414px) {
                 .options__left {
                     background-position: 0 0;
-                    background-size: 200% !important;
-                }
-
-                .options__right {
-                    background-size: 180% auto !important;
+                   
                 }
             }
             .options__title1:before {
@@ -124,8 +120,8 @@
                     <div class="hero__left col-lg-6 col-sm-12">
                         <h1 class="main-title">Полный чекап зрения за 350 грн</h1>
                         <p>Хотите знать, как будете видеть после лазерной коррекции зрения? Покажем за 100 гривен!</p>
-                        <button class="btn btn-green js-message">Записаться на прием</button>
-                        <button class="btn btn-transparent">Подробнее о процедуре</button>
+                        <button class="btn btn-success js-message">Записаться на прием</button>
+                        <button class="btn-bordered">Подробнее о процедуре</button>
                     </div>
                     <div class="hero__right col-lg-6 col-sm-12">
 
@@ -133,80 +129,74 @@
                 </div>
                 <div class="hero__row row_pos">
                     <div class="issues-wrap">
-                        <div class="issues row">
-                            <div class="issue-item-wrap first col-lg-3 col-sm-12">
-                                <div class="issue-item">
-                                    <span class="issue-item__img">
-                                        <img loading="lazy" src="assets/img/issue-item1.png" alt="eye">
-                                    </span>
-                                    <span class="issue-item__text">
-                                        Хотите восстановить зрение и сэкономить на контактных линзах?
-                                    </span>
-                                </div>
+                        <div class="issue-item-wrap">
+                            <div class="issue-item">
+                                <span class="issue-item__img">
+                                    <img loading="lazy" src="assets/img/issue-item1.png" alt="eye">
+                                </span>
+                                <span class="issue-item__text">
+                                    Хотите восстановить зрение и сэкономить на контактных линзах?
+                                </span>
                             </div>
-                            <div class="issue-grid col-lg-9 col-sm-12">
-                                <div class="row">
-                                    <div class="issue-item-wrap col-xl-4 col-md-6 col-sm-12">
-                                        <div class="issue-item">
-                                            <span class="issue-item__img">
-                                                <img loading="lazy" src="assets/img/issue-item2.png" alt="eye">
-                                            </span>
-                                            <span class="issue-item__text">
-                                                Устали постоянно протирать очки осенью или зимой, рискуя разбить их?
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="issue-item-wrap col-xl-4 col-md-6 col-sm-12">
-                                        <div class="issue-item">
-                                            <span class="issue-item__img">
-                                                <img loading="lazy" src="assets/img/issue-item3.png" alt="eye">
-                                            </span>
-                                            <span class="issue-item__text">
-                                                Ведёте активный образ жизни, а «помощники» для зрения доставляют дискомфорт?
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="issue-item-wrap col-xl-4 col-md-6 col-sm-12">
-                                        <div class="issue-item">
-                                            <span class="issue-item__img">
-                                                <img loading="lazy" src="assets/img/issue-item4.png" alt="eye">
-                                            </span>
-                                            <span class="issue-item__text">
-                                                Трудно купить солцезащитные очки и всегда помнить о том, чтобы взять линзы в поездку?
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="issue-item-wrap col-xl-4 col-md-6 col-sm-12">
-                                        <div class="issue-item">
-                                            <span class="issue-item__img">
-                                                <img loading="lazy" src="assets/img/issue-item2.png" alt="eye">
-                                            </span>
-                                            <span class="issue-item__text">
-                                                Устали постоянно протирать очки осенью или зимой, рискуя разбить их?
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="issue-item-wrap col-xl-4 col-md-6 col-sm-12">
-                                        <div class="issue-item">
-                                            <span class="issue-item__img">
-                                                <img loading="lazy" src="assets/img/issue-item3.png" alt="eye">
-                                            </span>
-                                            <span class="issue-item__text">
-                                                Ведёте активный образ жизни, а «помощники» для зрения доставляют дискомфорт?
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="issue-item-wrap col-xl-4 col-md-6 col-sm-12">
-                                        <div class="issue-item">
-                                            <span class="issue-item__img">
-                                                <img loading="lazy" src="assets/img/issue-item4.png" alt="eye">
-                                            </span>
-                                            <span class="issue-item__text">
-                                                Трудно купить солцезащитные очки и всегда помнить о том, чтобы взять линзы в поездку?
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
+                        </div>
+                        <div class="issue-item-wrap">
+                            <div class="issue-item">
+                                <span class="issue-item__img">
+                                    <img loading="lazy" src="assets/img/issue-item2.png" alt="eye">
+                                </span>
+                                <span class="issue-item__text">
+                                    Устали постоянно протирать очки осенью или зимой, рискуя разбить их?
+                                </span>
+                            </div>
+                        </div>
+                        <div class="issue-item-wrap">
+                            <div class="issue-item">
+                                <span class="issue-item__img">
+                                    <img loading="lazy" src="assets/img/issue-item3.png" alt="eye">
+                                </span>
+                                <span class="issue-item__text">
+                                    Ведёте активный образ жизни, а «помощники» для зрения доставляют дискомфорт?
+                                </span>
+                            </div>
+                        </div>
+                        <div class="issue-item-wrap">
+                            <div class="issue-item">
+                                <span class="issue-item__img">
+                                    <img loading="lazy" src="assets/img/issue-item4.png" alt="eye">
+                                </span>
+                                <span class="issue-item__text">
+                                    Трудно купить солцезащитные очки и всегда помнить о том, чтобы взять линзы в поездку?
+                                </span>
+                            </div>
+                        </div>
+                        <div class="issue-item-wrap">
+                            <div class="issue-item">
+                                <span class="issue-item__img">
+                                    <img loading="lazy" src="assets/img/issue-item2.png" alt="eye">
+                                </span>
+                                <span class="issue-item__text">
+                                    Устали постоянно протирать очки осенью или зимой, рискуя разбить их?
+                                </span>
+                            </div>
+                        </div>
+                        <div class="issue-item-wrap">
+                            <div class="issue-item">
+                                <span class="issue-item__img">
+                                    <img loading="lazy" src="assets/img/issue-item3.png" alt="eye">
+                                </span>
+                                <span class="issue-item__text">
+                                    Ведёте активный образ жизни, а «помощники» для зрения доставляют дискомфорт?
+                                </span>
+                            </div>
+                        </div>
+                        <div class="issue-item-wrap">
+                            <div class="issue-item">
+                                <span class="issue-item__img">
+                                    <img loading="lazy" src="assets/img/issue-item4.png" alt="eye">
+                                </span>
+                                <span class="issue-item__text">
+                                    Трудно купить солцезащитные очки и всегда помнить о том, чтобы взять линзы в поездку?
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -265,20 +255,20 @@
                 </div>
                 <h3 class="sub-title sub-title_big col-sm-12">Нужна дополнительная консультация?</h3>
                 <div class="button">
-                    <button class="btn btn-green">Задать вопрос врачу</button>
+                    <button class="btn btn-success">Задать вопрос врачу</button>
                 </div>
             </div>
         </div>
         <div class="options">
 
-            <div class="options__left col-lg-6 col-sm-12">
-                <div class="options__info col-lg-7">
+            <div class="options__left">
+                <div class="options__info">
                     <h3 class="options__title1 wow fadeInDown">Превью зрения доступно каждому</h3>
                     <p class="wow fadeInUp">Вы можете потратить 100 грн. на поход в кино — или вспомнить о том, что хотите хорошо видеть, и посетить наш центр</p>
                 </div>
             </div>
-            <div class="options__right col-lg-6 col-sm-12">
-                <div class="options__info col-lg-7">
+            <div class="options__right">
+                <div class="options__info">
                     <h3 class="options__title2 wow fadeInDown">Исключительный уровень безопасности</h3>
                     <p class="wow fadeInUp">Применение только одноразовых расходных материалов. Трёхступенчатый контроль стерильности в современной операционной</p>
                 </div>
@@ -423,7 +413,7 @@
                 <div class="sign-block__body">
                     <div class="icon wow fadeInDown"></div>
                     <h3 class="sub-title_big wow fadeInDown">Да, всё настолько просто!</h3>
-                    <button class="btn btn-green js-message wow fadeInUp">Записаться на прием</button>
+                    <button class="btn btn-success js-message wow fadeInUp">Записаться на прием</button>
                 </div>
             </div>
         </div>
@@ -492,7 +482,7 @@
                 </div>
             </div>
             <div class="button">
-                <button class="btn btn-green js-message">Записаться на прием</button>
+                <button class="btn btn-success js-message">Записаться на прием</button>
             </div>
         </div>
         <div class="equipment" id="equipment">
@@ -594,8 +584,8 @@
                 <p class="block-text col-lg-8">О высоком качестве предоставляемых услуг и ответственности за всё, что происходит в клинике, вам расскажут наши пациенты</p>
                 <div class="testimonials__body">
                     <div class="testimonials-tabs">
-                        <span class="btn btn-blue js-view active">Смотреть отзывы</span>
-                        <span class="btn btn-green js-read">Читать отзывы</span>
+                        <span class="btn btn-primary js-view active">Смотреть отзывы</span>
+                        <span class="btn btn-success js-read">Читать отзывы</span>
                     </div>
                 </div>
             </div>
@@ -724,7 +714,7 @@
                                     <img loading="lazy" src="assets/img/recaptcha.webp" alt="recaptcha">
                                 </span>
                                 <span class="center">
-                                    <input type="submit" value="Записаться на прием" class="btn btn-green">
+                                    <input type="submit" value="Записаться на прием" class="btn btn-success">
                                 </span>
                             </p>
                         </form>
@@ -815,7 +805,7 @@
                                     <img loading="lazy" src="assets/img/recaptcha.webp" alt="recaptcha">
                                 </span>
                                 <span class="center">
-                                    <input type="submit" value="Записаться на прием" class="btn btn-green">
+                                    <input type="submit" value="Записаться на прием" class="btn btn-success">
                                 </span>
                         </div>
                     </form>
