@@ -400,7 +400,7 @@ a:hover {
   min-height: auto; }
 
 .hero {
-  background: url(assets/img/hero-bg.jpg) no-repeat;
+  background: url(assets/img/hero-bg.webp) no-repeat;
   background-size: cover;
   width: 100%;
   position: relative;
@@ -816,7 +816,7 @@ a:hover {
 
 /****DOCTOR BLOCK****/
 .doctor {
-  background: url(assets/img/hero-bg.jpg) no-repeat;
+  background: url(assets/img/hero-bg.webp) no-repeat;
   background-size: cover;
   padding: 150px 0 100px; }
   .doctor .content {
@@ -927,7 +927,7 @@ a:hover {
 
 /****ADVANTAGES BLOCK****/
 .advantages {
-  background: url(assets/img/hero-bg.jpg) no-repeat;
+  background: url(assets/img/hero-bg.webp) no-repeat;
   background-size: cover;
   padding: 150px 20px 100px; }
   .advantages .title {
@@ -1398,7 +1398,7 @@ $screen-large 1280px
     top: 0;
     left: 0;
     width: 100%;
-    background: url(assets/img/hero-bg.jpg) no-repeat;
+    background: url(assets/img/hero-bg.webp) no-repeat;
     background-size: cover;
     padding: 120px 0 75px 150px;
     display: none;
@@ -1645,7 +1645,7 @@ $screen-large 1280px
     top: 0;
     left: 0;
     width: 100%;
-    background: url(assets/img/hero-bg.jpg) no-repeat;
+    background: url(assets/img/hero-bg.webp) no-repeat;
     background-size: cover;
     padding: 50px 15px;
     display: none;
