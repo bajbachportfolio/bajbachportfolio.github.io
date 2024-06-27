@@ -37,7 +37,7 @@ $(document).ready(function() {
         autoplay:false,
         speed:200
 	});
-	// $('.fancybox').fancybox();
+	$('.fancybox').fancybox();
 
     $('.deprt-select').niceSelect();
     $('.deprt-select-modal').niceSelect();
@@ -92,6 +92,23 @@ $(document).ready(function() {
     			$(itemHrz).css({ "width": "100%"});
     		}
     	}
+
+/// фиксация хедера при скроле
+    	if ($(document).scrollTop() > 128) {
+			$('.header').addClass('fixed');
+			$('.wrapper').css("padding-top", "128px");
+			$('.touch-menu').css("top", "24px");
+		} else {
+			$('.header').removeClass('fixed')
+			$('.wrapper').css("padding-top", "0");
+			$('.touch-menu').css("top", "48px");
+		}
+		if ($(window).width() < 575) {
+			$('.touch-menu').css("top", "33px");
+				if ($(document).scrollTop() > 128) {
+					$('.touch-menu').css("top", "24px");
+				}
+		}
     });
 
  //плавная прокрутка до блоков страницы
@@ -185,25 +202,4 @@ $(document).ready(function() {
 				$('html,body').animate({scrollTop: off_top}, 1000);
 				return false;
 			});
-
-	 /*якоря*/
-	 $("#ancorLink").on("click", "a", function(event) {
-        event.preventDefault();
-        var id = $(this).attr('href'),
-            top = $(id).offset().top;
-        $('body,html').animate({
-            scrollTop: top
-        }, 1000);
-    });
 });
-
-// window.addEventListener('load', async () => {
-// 	if ('serviceWorker' in navigator) {
-// 	  try {
-// 		const reg = await navigator.serviceWorker.register('../../iqclinic_PS_opt/sw.js')
-// 		console.log('Service worker register success', reg)
-// 	  } catch (e) {
-// 		console.log('Service worker register fail')
-// 	  }
-// 	}
-//   })
