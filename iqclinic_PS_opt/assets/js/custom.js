@@ -185,15 +185,25 @@ $(document).ready(function() {
 				$('html,body').animate({scrollTop: off_top}, 1000);
 				return false;
 			});
+
+	 /*якоря*/
+	 $("#ancorLink").on("click", "a", function(event) {
+        event.preventDefault();
+        var id = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({
+            scrollTop: top
+        }, 1000);
+    });
 });
 
-window.addEventListener('load', async () => {
-	if ('serviceWorker' in navigator) {
-	  try {
-		const reg = await navigator.serviceWorker.register('../../iqclinic_PS_opt/sw.js')
-		console.log('Service worker register success', reg)
-	  } catch (e) {
-		console.log('Service worker register fail')
-	  }
-	}
-  })
+// window.addEventListener('load', async () => {
+// 	if ('serviceWorker' in navigator) {
+// 	  try {
+// 		const reg = await navigator.serviceWorker.register('../../iqclinic_PS_opt/sw.js')
+// 		console.log('Service worker register success', reg)
+// 	  } catch (e) {
+// 		console.log('Service worker register fail')
+// 	  }
+// 	}
+//   })
