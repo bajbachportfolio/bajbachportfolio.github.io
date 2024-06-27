@@ -92,23 +92,6 @@ $(document).ready(function() {
     			$(itemHrz).css({ "width": "100%"});
     		}
     	}
-
-/// фиксация хедера при скроле
-    	if ($(document).scrollTop() > 128) {
-			$('.header').addClass('fixed');
-			$('.wrapper').css("padding-top", "128px");
-			$('.touch-menu').css("top", "24px");
-		} else {
-			$('.header').removeClass('fixed')
-			$('.wrapper').css("padding-top", "0");
-			$('.touch-menu').css("top", "48px");
-		}
-		if ($(window).width() < 575) {
-			$('.touch-menu').css("top", "33px");
-				if ($(document).scrollTop() > 128) {
-					$('.touch-menu').css("top", "24px");
-				}
-		}
     });
 
  //плавная прокрутка до блоков страницы
