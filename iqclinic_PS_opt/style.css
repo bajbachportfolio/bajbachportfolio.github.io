@@ -65,7 +65,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .modal-dialog {
   display: flex;
   align-items: center;
-  max-width: 750px;
+  max-width: 750px !important;
   position: relative; }
   .modal-dialog:before {
     content: '';
@@ -421,8 +421,8 @@ a:hover {
     top: -110px;
     z-index: -1; }
 
-.issues {
-  display: flex;
+.issue {
+  background-color: #004175;
 }
 
 .issue-item-wrap {
