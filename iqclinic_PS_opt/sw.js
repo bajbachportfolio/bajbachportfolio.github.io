@@ -31,17 +31,17 @@ const staticCacheName = 'static_cache_v1';
 //     )
 //   })
 
-self.addEventListener('install', function(event) {
+self.addEventListener('install', (event) => {
   // Пропуск установки, если есть предыдущая версия кэша
   self.skipWaiting();
 });
 
-self.addEventListener('activate', function(event) {
+self.addEventListener('activate', (event) => {
   // Очистка старого кэша при активации нового Service Worker
   event.waitUntil(
-    caches.keys().then(function(cacheNames) {
+    caches.keys().then((cacheNames) => {
       return Promise.all(
-        cacheNames.map(function(cacheName) {
+        cacheNames.map((cacheName) => {
           if (cacheName !== staticCacheName) {
             return caches.delete(cacheName);
           }
@@ -51,16 +51,16 @@ self.addEventListener('activate', function(event) {
   );
 });
 
-self.addEventListener('fetch', function(event) {
+self.addEventListener('fetch', (event) => {
   event.respondWith(
-    caches.match(event.request).then(function(response) {
+    caches.match(event.request).then((response) => {
       if (response) {
         // Если ресурс есть в кэше, возвращаем его
         return response;
       }
       // Если ресурса нет в кэше, запрашиваем его из сети и кэшируем
-      return fetch(event.request).then(function(networkResponse) {
-        return caches.open(staticCacheName).then(function(cache) {
+      return fetch(event.request).then((networkResponse) => {
+        return caches.open(staticCacheName).then((cache) => {
           // Кэшируем только успешные ответы
           if (networkResponse.status === 200) {
             cache.put(event.request, networkResponse.clone());
@@ -68,7 +68,7 @@ self.addEventListener('fetch', function(event) {
           return networkResponse;
         });
       });
-    }).catch(function() {
+    }).catch(() => {
       // Здесь можно вернуть резервный офлайн-ресурс, если запрос не удался
     })
   );
