@@ -1,0 +1,13 @@
+{
+  "name": "glueup-events",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "netlify dev",
+    "build": "netlify build",
+    "deploy": "netlify deploy --prod"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}
